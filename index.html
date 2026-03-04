@@ -1857,14 +1857,74 @@
         const leadForm = document.getElementById('leadForm');
         const formSuccess = document.getElementById('formSuccess');
 
-        leadForm.addEventListener('submit', function(e) {
+        leadForm.addEventListener('submit', async function(e) {
             e.preventDefault();
 
             const formData = new FormData(leadForm);
             const data = Object.fromEntries(formData.entries());
+            const submitBtn = leadForm.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Submitting...';
 
-            // Log the lead data (replace with actual form endpoint)
-            console.log('Lead captured:', data);
+            // Split name into first/last
+            const nameParts = (data.name || '').trim().split(' ');
+            const firstName = nameParts[0] || '';
+            const lastName = nameParts.slice(1).join(' ') || '';
+
+            // Map timeline values to GHL custom field options
+            const timelineMap = {
+                'immediately': 'Immediate (0-3m)',
+                '1-3months': '3-6 months',
+                '3-6months': '6-12 months',
+                '6months+': 'Just exploring'
+            };
+
+            // Map project type to GHL custom field options
+            const projectTypeMap = {
+                'new-construction': 'Construction + Interior',
+                'renovation': 'Renovation',
+                'interiors': 'Interior Only',
+                'commercial': 'Construction Only'
+            };
+
+            // Map budget to GHL custom field options
+            const budgetMap = {
+                '30L-50L': '30L-50L',
+                '50L-1Cr': '50L-1Cr',
+                '1Cr-3Cr': '1Cr-2Cr',
+                '3Cr-5Cr': '4Cr-10Cr',
+                '5Cr+': '10Cr+'
+            };
+
+            // Submit to GHL CRM
+            const ghlPayload = {
+                firstName: firstName,
+                lastName: lastName,
+                phone: data.phone,
+                source: 'Landing Page',
+                tags: ['source-landing-page'],
+                customFields: [
+                    { id: 'Ce7A0NnvrNvsuGi9IUZY', value: 'Landing Page' },
+                    { id: '7rDKc2FzhATW1tmAB9RD', value: projectTypeMap[data['project-type']] || data['project-type'] || '' },
+                    { id: 'KOVn6KXb6DV3id6n3ag3', value: budgetMap[data.budget] || data.budget || '' },
+                    { id: 'jBjoiG9fqnNZDmo4VO91', value: timelineMap[data.timeline] || data.timeline || '' }
+                ]
+            };
+
+            try {
+                const res = await fetch('https://services.leadconnectorhq.com/contacts/', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Authorization': 'Bearer pit-fa9006bb-5d3b-4701-908b-56ea66b91445',
+                        'Version': '2021-07-28'
+                    },
+                    body: JSON.stringify({ ...ghlPayload, locationId: 'woRHKXvoq2V8JfLXPNnC' })
+                });
+                if (!res.ok) console.warn('GHL submit status:', res.status);
+            } catch (err) {
+                console.warn('GHL submit error:', err);
+            }
 
             // Show success state
             leadForm.style.display = 'none';
