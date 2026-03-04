@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AD 2 — Interior Luxury | NUBUILDCo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #111; display: flex; justify-content: center; align-items: center; min-height: 100vh; }
+    .ad {
+      width: 1080px; height: 1080px;
+      position: relative; overflow: hidden;
+      font-family: 'Inter', sans-serif;
+    }
+    .ad img.bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.2) 40%, rgba(0,0,0,0.7) 100%);
+    }
+    .logo {
+      position: absolute; top: 40px; left: 44px;
+      height: 44px; width: auto; z-index: 5;
+      filter: brightness(10);
+    }
+    .center-content {
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5; text-align: center; width: 80%;
+    }
+    .divider {
+      width: 60px; height: 2px;
+      background: #C49A6C;
+      margin: 0 auto 24px;
+    }
+    h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700; font-size: 58px;
+      line-height: 1.15; color: #fff;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.5);
+      margin-bottom: 16px;
+    }
+    .sub {
+      font-size: 14px; font-weight: 500;
+      color: #C49A6C;
+      letter-spacing: 3px; text-transform: uppercase;
+    }
+    .cta-bar {
+      position: absolute; bottom: 0; left: 0; right: 0;
+      z-index: 6;
+      background: #81350B;
+      display: flex; align-items: center; justify-content: center;
+      padding: 22px;
+    }
+    .cta-bar span {
+      color: #fff; font-weight: 700;
+      font-size: 15px; letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="ad">
+    <img class="bg" src="../assets/portfolio/aarohi/living-area.jpg" alt="Luxury Living Area">
+    <div class="overlay"></div>
+    <img class="logo" src="../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo">
+    <div class="center-content">
+      <div class="divider"></div>
+      <h1>Interiors That<br>Speak Luxury</h1>
+      <div class="sub">Design &bull; Build &bull; Furnish &bull; Style</div>
+    </div>
+    <div class="cta-bar">
+      <span>Book Free Strategy Call &rarr;</span>
+    </div>
+  </div>
+</body>
+</html>

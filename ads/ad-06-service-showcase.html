@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AD 6 — Service Showcase (Carousel) | NUBUILDCo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #111; display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 40px 20px; }
+    h2.page-title {
+      font-family: 'Cormorant Garamond', serif;
+      color: #C49A6C; font-size: 28px; font-weight: 600;
+      margin-bottom: 8px; text-align: center;
+    }
+    .page-sub { color: #888; font-family: 'Inter', sans-serif; font-size: 13px; margin-bottom: 40px; }
+    .carousel {
+      display: flex; gap: 24px;
+      overflow-x: auto; max-width: 100%;
+      padding-bottom: 20px;
+    }
+    .slide {
+      width: 540px; height: 540px; flex-shrink: 0;
+      position: relative; overflow: hidden;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+    }
+    .slide img.bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .slide .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.7) 100%);
+    }
+    .slide .step-number {
+      position: absolute; top: 20px; left: 20px;
+      z-index: 5;
+      width: 44px; height: 44px;
+      background: #81350B; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      color: #fff; font-weight: 800; font-size: 18px;
+    }
+    .slide .logo {
+      position: absolute; top: 20px; right: 20px;
+      height: 28px; z-index: 5;
+      filter: brightness(10);
+    }
+    .slide .text {
+      position: absolute; bottom: 28px; left: 28px; right: 28px;
+      z-index: 5;
+    }
+    .slide .text .tag {
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      color: #C49A6C; margin-bottom: 10px;
+    }
+    .slide .text h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600; font-size: 36px;
+      color: #fff; margin-bottom: 8px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+    }
+    .slide .text p {
+      font-size: 13px; color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+    }
+    .slide .swipe-hint {
+      position: absolute; bottom: 28px; right: 28px;
+      z-index: 5; color: rgba(255,255,255,0.4);
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    /* CTA slide */
+    .cta-content {
+      position: absolute; inset: 0; z-index: 5;
+      background: #231C16;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center; padding: 48px;
+    }
+    .cta-content .logo-cta { height: 40px; margin-bottom: 32px; filter: brightness(10); }
+    .cta-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 36px; color: #fff; margin-bottom: 16px; line-height: 1.2; }
+    .cta-content p { font-size: 14px; color: #aaa; margin-bottom: 28px; line-height: 1.5; }
+    .cta-content .steps-row { display: flex; gap: 16px; margin-bottom: 32px; }
+    .cta-content .mini-step {
+      background: rgba(129,53,11,0.3); border: 1px solid rgba(129,53,11,0.6);
+      padding: 10px 18px; border-radius: 4px;
+      color: #C49A6C; font-size: 12px; font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+    .cta-content .btn {
+      padding: 16px 40px; background: #81350B;
+      color: #fff; font-weight: 700; font-size: 14px;
+      letter-spacing: 1px; border-radius: 4px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="page-title">Carousel Ad 3 — Service Showcase</h2>
+  <div class="page-sub">Design &rarr; Build &rarr; Furnish &rarr; Style | 1080x1080 per slide</div>
+  <div class="carousel">
+    <!-- Slide 1: Design -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/aarohi/drawing-area.jpg" alt="Design">
+      <div class="overlay"></div>
+      <div class="step-number">01</div>
+      <img class="logo" src="../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo">
+      <div class="text">
+        <div class="tag">Step One</div>
+        <h3>Design</h3>
+        <p>Architectural plans, 3D visualizations, and interior concepts tailored to your vision</p>
+      </div>
+      <div class="swipe-hint">Swipe &rarr;</div>
+    </div>
+    <!-- Slide 2: Build -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/sudharshan-house/exterior-2.jpg" alt="Build">
+      <div class="overlay"></div>
+      <div class="step-number">02</div>
+      <div class="text">
+        <div class="tag">Step Two</div>
+        <h3>Build</h3>
+        <p>Expert construction with transparent timelines, no budget overruns, and quality at every stage</p>
+      </div>
+      <div class="swipe-hint">Swipe &rarr;</div>
+    </div>
+    <!-- Slide 3: Furnish -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/new-project/master-bedroom.jpg" alt="Furnish">
+      <div class="overlay"></div>
+      <div class="step-number">03</div>
+      <div class="text">
+        <div class="tag">Step Three</div>
+        <h3>Furnish</h3>
+        <p>Custom furniture, modular kitchens, wardrobes, and every detail to make it feel like home</p>
+      </div>
+      <div class="swipe-hint">Swipe &rarr;</div>
+    </div>
+    <!-- Slide 4: Style -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/ananthapur-apartment/interior-2.jpg" alt="Style">
+      <div class="overlay"></div>
+      <div class="step-number">04</div>
+      <div class="text">
+        <div class="tag">Step Four</div>
+        <h3>Style</h3>
+        <p>Final styling, lighting, and finishing touches that turn a house into a luxury home</p>
+      </div>
+      <div class="swipe-hint">Swipe &rarr;</div>
+    </div>
+    <!-- Slide 5: CTA -->
+    <div class="slide">
+      <div class="cta-content">
+        <img class="logo-cta" src="../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo">
+        <h3>One Team.<br>Start to Finish.</h3>
+        <p>Why hire 5 vendors when NUBUILDCo does it all?</p>
+        <div class="steps-row">
+          <div class="mini-step">Design</div>
+          <div class="mini-step">Build</div>
+          <div class="mini-step">Furnish</div>
+          <div class="mini-step">Style</div>
+        </div>
+        <div class="btn">Book Free Consultation &rarr;</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

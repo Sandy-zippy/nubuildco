@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AD 5 — Multi-Project Showcase (Carousel) | NUBUILDCo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #111; display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 40px 20px; }
+    h2.page-title {
+      font-family: 'Cormorant Garamond', serif;
+      color: #C49A6C; font-size: 28px; font-weight: 600;
+      margin-bottom: 8px; text-align: center;
+    }
+    .page-sub { color: #888; font-family: 'Inter', sans-serif; font-size: 13px; margin-bottom: 40px; }
+    .carousel {
+      display: flex; gap: 24px;
+      overflow-x: auto; max-width: 100%;
+      padding-bottom: 20px;
+    }
+    .slide {
+      width: 540px; height: 540px; flex-shrink: 0;
+      position: relative; overflow: hidden;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+    }
+    .slide img.bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .slide .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.7) 100%);
+    }
+    .slide .logo {
+      position: absolute; top: 20px; left: 20px;
+      height: 32px; width: auto; z-index: 5;
+      filter: brightness(10);
+    }
+    .slide .project-info {
+      position: absolute; bottom: 24px; left: 24px; right: 24px;
+      z-index: 5;
+    }
+    .slide .project-info .tag {
+      display: inline-block;
+      background: #81350B; color: #fff;
+      padding: 6px 14px; border-radius: 3px;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .slide .project-info h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600; font-size: 32px;
+      color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      margin-bottom: 4px;
+    }
+    .slide .project-info span {
+      font-size: 13px; color: rgba(255,255,255,0.7);
+    }
+    .slide .counter {
+      position: absolute; bottom: 24px; right: 24px;
+      z-index: 5; color: rgba(255,255,255,0.5);
+      font-size: 13px; font-weight: 600;
+    }
+    /* CTA slide */
+    .cta-content {
+      position: absolute; inset: 0; z-index: 5;
+      background: linear-gradient(135deg, #231C16 0%, #3D3229 100%);
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center; padding: 48px;
+    }
+    .cta-content .logo-cta { height: 40px; margin-bottom: 28px; filter: brightness(10); }
+    .cta-content .stat { font-size: 56px; font-weight: 700; color: #C49A6C; margin-bottom: 8px; font-family: 'Cormorant Garamond', serif; }
+    .cta-content .stat-label { font-size: 14px; color: #aaa; margin-bottom: 32px; letter-spacing: 1px; }
+    .cta-content h3 { font-family: 'Cormorant Garamond', serif; font-size: 34px; color: #fff; margin-bottom: 28px; line-height: 1.2; }
+    .cta-content .btn {
+      padding: 16px 40px; background: #81350B;
+      color: #fff; font-weight: 700; font-size: 14px;
+      letter-spacing: 1px; border-radius: 4px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="page-title">Carousel Ad 2 — Multi-Project Showcase</h2>
+  <div class="page-sub">Swipe to explore | 1080x1080 per slide</div>
+  <div class="carousel">
+    <!-- Slide 1: Aarohi -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/aarohi/north-facade.jpg" alt="Aarohi Residence">
+      <div class="overlay"></div>
+      <img class="logo" src="../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo">
+      <div class="project-info">
+        <div class="tag">Residential Villa</div>
+        <h3>Aarohi Residence</h3>
+        <span>Construction + Interiors | Hyderabad</span>
+      </div>
+      <div class="counter">1/5</div>
+    </div>
+    <!-- Slide 2: Sudharshan -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/sudharshan-house/exterior-1.jpg" alt="Sudharshan House">
+      <div class="overlay"></div>
+      <div class="project-info">
+        <div class="tag">Premium Villa</div>
+        <h3>Sudharshan House</h3>
+        <span>Architecture + Build | Hyderabad</span>
+      </div>
+      <div class="counter">2/5</div>
+    </div>
+    <!-- Slide 3: New Project -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/new-project/entrance-foyer.jpg" alt="New Project">
+      <div class="overlay"></div>
+      <div class="project-info">
+        <div class="tag">Interior Design</div>
+        <h3>Residence Interiors</h3>
+        <span>Full Interior Fit-Out | Hyderabad</span>
+      </div>
+      <div class="counter">3/5</div>
+    </div>
+    <!-- Slide 4: Ananthapur -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/ananthapur-apartment/interior-1.jpg" alt="Ananthapur Apartment">
+      <div class="overlay"></div>
+      <div class="project-info">
+        <div class="tag">Apartment</div>
+        <h3>Ananthapur Apartment</h3>
+        <span>Premium Apartment Interiors</span>
+      </div>
+      <div class="counter">4/5</div>
+    </div>
+    <!-- Slide 5: CTA -->
+    <div class="slide">
+      <div class="cta-content">
+        <img class="logo-cta" src="../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo">
+        <div class="stat">&#8377;25Cr+</div>
+        <div class="stat-label">Projects Delivered in Hyderabad</div>
+        <h3>Your Project Could<br>Be Next</h3>
+        <div class="btn">Book Free Consultation &rarr;</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

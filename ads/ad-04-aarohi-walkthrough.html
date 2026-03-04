@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AD 4 — Aarohi Walkthrough (Carousel) | NUBUILDCo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #111; display: flex; flex-direction: column; align-items: center; min-height: 100vh; padding: 40px 20px; }
+    h2.page-title {
+      font-family: 'Cormorant Garamond', serif;
+      color: #C49A6C; font-size: 28px; font-weight: 600;
+      margin-bottom: 8px; text-align: center;
+    }
+    .page-sub { color: #888; font-family: 'Inter', sans-serif; font-size: 13px; margin-bottom: 40px; }
+    .carousel {
+      display: flex; gap: 24px;
+      overflow-x: auto; max-width: 100%;
+      padding-bottom: 20px;
+    }
+    .slide {
+      width: 540px; height: 540px; flex-shrink: 0;
+      position: relative; overflow: hidden;
+      border-radius: 8px;
+      font-family: 'Inter', sans-serif;
+    }
+    .slide img.bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .slide .overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(180deg, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.6) 100%);
+    }
+    .slide .label {
+      position: absolute; top: 20px; left: 20px;
+      z-index: 5;
+      background: rgba(129,53,11,0.9);
+      color: #fff; padding: 8px 16px;
+      border-radius: 4px;
+      font-size: 12px; font-weight: 700;
+      letter-spacing: 1px; text-transform: uppercase;
+    }
+    .slide .room-name {
+      position: absolute; bottom: 24px; left: 24px;
+      z-index: 5;
+    }
+    .slide .room-name h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600; font-size: 32px;
+      color: #fff; text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+      margin-bottom: 4px;
+    }
+    .slide .room-name span {
+      font-size: 12px; color: #C49A6C;
+      letter-spacing: 1px; text-transform: uppercase;
+    }
+    .slide .logo {
+      position: absolute; top: 20px; right: 20px;
+      height: 32px; width: auto; z-index: 5;
+      filter: brightness(10);
+    }
+    .slide .counter {
+      position: absolute; bottom: 24px; right: 24px;
+      z-index: 5; color: rgba(255,255,255,0.5);
+      font-size: 13px; font-weight: 600;
+    }
+    .slide:last-child .cta-slide {
+      position: absolute; inset: 0; z-index: 5;
+      background: #231C16;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center; padding: 40px;
+    }
+    .cta-slide .logo-cta { height: 40px; margin-bottom: 24px; filter: brightness(10); }
+    .cta-slide h3 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600; font-size: 36px;
+      color: #C49A6C; margin-bottom: 12px; line-height: 1.2;
+    }
+    .cta-slide p { color: #aaa; font-size: 14px; margin-bottom: 32px; line-height: 1.5; }
+    .cta-slide .btn {
+      padding: 16px 40px; background: #81350B;
+      color: #fff; font-weight: 700; font-size: 14px;
+      letter-spacing: 1px; border-radius: 4px;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <h2 class="page-title">Carousel Ad 1 — Aarohi Project Walkthrough</h2>
+  <div class="page-sub">Swipe to explore | 1080x1080 per slide</div>
+  <div class="carousel">
+    <!-- Slide 1: Living Area -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/aarohi/living-area.jpg" alt="Living Area">
+      <div class="overlay"></div>
+      <div class="label">Aarohi Residence</div>
+      <img class="logo" src="../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo">
+      <div class="room-name">
+        <h3>The Living Area</h3>
+        <span>Designed for Conversations</span>
+      </div>
+      <div class="counter">1/5</div>
+    </div>
+    <!-- Slide 2: Dining -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/aarohi/dining-area.jpg" alt="Dining Area">
+      <div class="overlay"></div>
+      <div class="label">Aarohi Residence</div>
+      <div class="room-name">
+        <h3>The Dining Area</h3>
+        <span>Where Families Come Together</span>
+      </div>
+      <div class="counter">2/5</div>
+    </div>
+    <!-- Slide 3: Kitchen -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/aarohi/kitchen.jpg" alt="Kitchen">
+      <div class="overlay"></div>
+      <div class="label">Aarohi Residence</div>
+      <div class="room-name">
+        <h3>The Kitchen</h3>
+        <span>Built for the Modern Chef</span>
+      </div>
+      <div class="counter">3/5</div>
+    </div>
+    <!-- Slide 4: Master Bedroom -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/aarohi/master-bedroom.jpg" alt="Master Bedroom">
+      <div class="overlay"></div>
+      <div class="label">Aarohi Residence</div>
+      <div class="room-name">
+        <h3>The Master Suite</h3>
+        <span>Your Private Retreat</span>
+      </div>
+      <div class="counter">4/5</div>
+    </div>
+    <!-- Slide 5: CTA -->
+    <div class="slide">
+      <img class="bg" src="../assets/portfolio/aarohi/west-facade.jpg" alt="Aarohi Exterior">
+      <div class="cta-slide">
+        <img class="logo-cta" src="../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo">
+        <h3>Want a Home<br>Like Aarohi?</h3>
+        <p>End-to-end construction &amp; interiors<br>in Hyderabad. One team. One timeline.</p>
+        <div class="btn">Book Free Consultation &rarr;</div>
+      </div>
+      <div class="counter" style="color:rgba(255,255,255,0.3);">5/5</div>
+    </div>
+  </div>
+</body>
+</html>
