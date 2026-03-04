@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>NUBUILDCo Logo Variations — Orange + Gray</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: Inter, system-ui, sans-serif; background: #f5f5f5; padding: 40px; }
+  h1 { font-size: 24px; color: #333; margin-bottom: 32px; font-weight: 600; }
+  .row { display: flex; gap: 32px; margin-bottom: 40px; flex-wrap: wrap; }
+  .card { background: #fff; border-radius: 12px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); flex: 1; min-width: 300px; }
+  .card.dark { background: #1a1a1a; }
+  .card h3 { font-size: 14px; color: #8C8C8C; font-weight: 500; margin-bottom: 20px; letter-spacing: 1px; text-transform: uppercase; }
+  .card.dark h3 { color: #aaa; }
+  .card img { max-width: 100%; height: auto; }
+  .card--stacked { max-width: 400px; }
+  .colors { display: flex; gap: 16px; margin-top: 20px; }
+  .swatch { width: 60px; height: 60px; border-radius: 8px; display: flex; align-items: end; padding: 4px; }
+  .swatch span { font-size: 10px; color: #fff; font-weight: 500; }
+</style>
+</head>
+<body>
+  <h1>NUBUILDCo Logo Variations — Orange + Gray</h1>
+
+  <h2 style="font-size:16px; color:#666; margin-bottom:16px;">Color Palette</h2>
+  <div class="colors" style="margin-bottom:40px;">
+    <div class="swatch" style="background:#E87A2E;"><span>#E87A2E</span></div>
+    <div class="swatch" style="background:#F28C38;"><span>#F28C38</span></div>
+    <div class="swatch" style="background:#4A4A4A;"><span>#4A4A4A</span></div>
+    <div class="swatch" style="background:#8C8C8C;"><span>#8C8C8C</span></div>
+  </div>
+
+  <h2 style="font-size:16px; color:#666; margin-bottom:16px;">Variation 1: Wordmark Only (Orange)</h2>
+  <div class="row">
+    <div class="card">
+      <h3>Light Background</h3>
+      <img src="nubuild-v1-wordmark-orange.svg" alt="V1 Orange">
+    </div>
+    <div class="card dark">
+      <h3>Dark Background</h3>
+      <img src="nubuild-v1-wordmark-white.svg" alt="V1 White">
+    </div>
+  </div>
+
+  <h2 style="font-size:16px; color:#666; margin-bottom:16px;">Variation 2: Icon + Wordmark (Orange Icon, Gray Text)</h2>
+  <div class="row">
+    <div class="card">
+      <h3>Light Background</h3>
+      <img src="nubuild-v2-icon-wordmark.svg" alt="V2">
+    </div>
+  </div>
+
+  <h2 style="font-size:16px; color:#666; margin-bottom:16px;">Variation 3: Stacked (Icon Top, Text Below)</h2>
+  <div class="row">
+    <div class="card card--stacked">
+      <h3>Light Background</h3>
+      <img src="nubuild-v3-stacked.svg" alt="V3">
+    </div>
+  </div>
+</body>
+</html>
