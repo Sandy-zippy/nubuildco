@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="600" viewBox="0 0 800 600">
+  <rect width="800" height="600" fill="#F0E8DD"/>
+  <rect x="300" y="180" width="200" height="140" rx="8" fill="none" stroke="#B8A897" stroke-width="2" stroke-dasharray="8,4"/>
+  <path d="M360 260 L400 220 L440 260" fill="none" stroke="#B8A897" stroke-width="2"/>
+  <circle cx="430" cy="230" r="12" fill="none" stroke="#B8A897" stroke-width="2"/>
+  <text x="400" y="360" text-anchor="middle" font-family="Inter,sans-serif" font-size="18" font-weight="600" fill="#584A3D">Kiran Project</text>
+  <text x="400" y="390" text-anchor="middle" font-family="Inter,sans-serif" font-size="14" fill="#96836F">Photos awaited from client</text>
+</svg>

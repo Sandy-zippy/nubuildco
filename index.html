@@ -678,6 +678,23 @@
             display: none;
         }
 
+        .portfolio__placeholder {
+            border: 2px dashed var(--warm-300);
+            cursor: default;
+        }
+
+        .portfolio__placeholder img {
+            object-fit: contain;
+            background: var(--warm-100);
+        }
+
+        .portfolio__placeholder .portfolio__label {
+            opacity: 1;
+            transform: none;
+            color: var(--warm-500);
+            font-style: italic;
+        }
+
         .portfolio__grid {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
@@ -1716,6 +1733,16 @@
                 <div class="portfolio__item reveal reveal-delay-2" data-category="renovation" onclick="openLightbox(this)">
                     <img src="assets/portfolio/ananthapur-apartment/interior-1.jpg" alt="Ananthapur Apartment — modern interior" loading="lazy">
                     <span class="portfolio__label">Ananthapur Apartment — Interior</span>
+                </div>
+                <!-- Kiran — Awaiting photos from client -->
+                <div class="portfolio__item reveal portfolio__placeholder" data-category="end-to-end">
+                    <img src="assets/portfolio/kiran/placeholder.svg" alt="Kiran Project — photos coming soon" loading="lazy">
+                    <span class="portfolio__label">Kiran — Coming Soon</span>
+                </div>
+                <!-- Nagendra Babu — Awaiting photos from client -->
+                <div class="portfolio__item reveal reveal-delay-1 portfolio__placeholder" data-category="end-to-end">
+                    <img src="assets/portfolio/nagendra-babu/placeholder.svg" alt="Nagendra Babu Project — photos coming soon" loading="lazy">
+                    <span class="portfolio__label">Nagendra Babu — Coming Soon</span>
                 </div>
             </div>
         </div>
