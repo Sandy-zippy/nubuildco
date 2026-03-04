@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NUBUILDCo — Ad Creative Mockups</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --brown: #81350B;
+      --gold: #C49A6C;
+      --cream: #FAF6F1;
+      --dark: #231C16;
+      --page-bg: #1a1a1a;
+    }
+
+    body {
+      background: var(--page-bg);
+      color: #ccc;
+      font-family: 'Inter', sans-serif;
+      padding: 40px 20px 80px;
+    }
+
+    .page-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .page-header h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 42px;
+      color: var(--cream);
+      letter-spacing: 1px;
+    }
+    .page-header p {
+      margin-top: 10px;
+      font-size: 14px;
+      color: #888;
+      letter-spacing: 0.5px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px 40px;
+      max-width: 920px;
+      margin: 0 auto;
+    }
+    @media (max-width: 900px) {
+      .grid { grid-template-columns: 1fr; max-width: 460px; }
+    }
+
+    .mockup-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mockup-label {
+      width: 100%;
+      margin-bottom: 12px;
+      padding: 10px 14px;
+      background: #252525;
+      border-radius: 8px 8px 0 0;
+      border-bottom: 2px solid var(--brown);
+    }
+    .mockup-label .ad-name {
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--cream);
+      margin-bottom: 4px;
+    }
+    .mockup-label .ad-meta {
+      font-size: 11px;
+      color: #999;
+      letter-spacing: 0.3px;
+    }
+    .mockup-label .ad-meta span {
+      color: var(--gold);
+    }
+
+    /* ---------- AD FRAMES ---------- */
+    .ad-frame {
+      width: 400px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 0 0 8px 8px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+      flex-shrink: 0;
+    }
+    .ad-frame.sq   { height: 400px; }
+    .ad-frame.port { height: 500px; }
+
+    @media (max-width: 480px) {
+      .ad-frame       { width: 100%; }
+      .ad-frame.sq    { height: 0; padding-bottom: 100%; }
+      .ad-frame.port  { height: 0; padding-bottom: 125%; }
+      .mockup-label   { width: 100%; }
+    }
+
+    /* shared helpers */
+    .ad-frame img.bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .ad-frame .overlay {
+      position: absolute; inset: 0;
+    }
+    .ad-frame .logo-white,
+    .ad-frame .logo-brown {
+      position: absolute;
+      z-index: 5;
+    }
+    .ad-frame .logo-white { filter: brightness(10); }
+    .ad-frame .content {
+      position: absolute; inset: 0;
+      z-index: 4;
+      display: flex;
+      flex-direction: column;
+      padding: 24px;
+    }
+    .serif { font-family: 'Cormorant Garamond', serif; }
+    .sans  { font-family: 'Inter', sans-serif; }
+
+    /* CTA bar pinned to bottom */
+    .cta-bar {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      z-index: 6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 14px 20px;
+    }
+    .cta-bar span {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.8px;
+    }
+
+    /* pill / badge */
+    .pill {
+      display: inline-block;
+      padding: 8px 22px;
+      border-radius: 40px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.4px;
+    }
+
+    /* button */
+    .btn {
+      display: inline-block;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      letter-spacing: 0.4px;
+      text-align: center;
+    }
+    .btn-outline {
+      border: 1.5px solid #fff;
+      color: #fff;
+      background: transparent;
+    }
+
+    /* ============================================
+       INDIVIDUAL AD STYLES
+       ============================================ */
+
+    /* --- AD 1: Fear Resolution --- */
+    .ad1 .overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.35) 0%,
+        rgba(0,0,0,0.55) 40%,
+        rgba(0,0,0,0.75) 100%
+      );
+    }
+    .ad1 .logo-white {
+      top: 22px; left: 50%;
+      transform: translateX(-50%);
+      height: 28px; width: auto;
+    }
+    .ad1 .headline {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      width: 85%;
+    }
+    .ad1 .headline h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+    .ad1 .badge-wrap {
+      position: absolute;
+      bottom: 70px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .ad1 .badge-wrap .pill {
+      background: var(--gold);
+      color: var(--dark);
+      font-size: 12px;
+    }
+    .ad1 .cta-bar {
+      background: var(--brown);
+    }
+    .ad1 .cta-bar span { color: #fff; }
+
+    /* --- AD 2: End-to-End Promise --- */
+    .ad2 .overlay {
+      background: rgba(0,0,0,0.45);
+    }
+    .ad2 .logo-white {
+      top: 20px; left: 22px;
+      height: 26px; width: auto;
+    }
+    .ad2 .headline {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -55%);
+      text-align: center;
+      width: 88%;
+    }
+    .ad2 .headline h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+    .ad2 .subline {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, 30px);
+      text-align: center;
+      width: 90%;
+    }
+    .ad2 .subline p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 12px;
+      color: var(--gold);
+      letter-spacing: 1.5px;
+    }
+    .ad2 .cta-bar {
+      background: var(--brown);
+    }
+    .ad2 .cta-bar span { color: #fff; }
+
+    /* --- AD 3: Cost Guide --- */
+    .ad3 {
+      background: var(--cream);
+    }
+    .ad3 .content {
+      padding: 28px 26px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ad3 .top-label {
+      font-family: 'Inter', sans-serif;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 2.5px;
+      color: var(--brown);
+      text-transform: uppercase;
+    }
+    .ad3 .main-text {
+      text-align: center;
+      padding: 0 8px;
+    }
+    .ad3 .main-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 27px;
+      line-height: 1.25;
+      color: var(--brown);
+    }
+    .ad3 .guide-icon {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+    .ad3 .guide-icon .book-icon {
+      width: 48px; height: 58px;
+      background: var(--brown);
+      border-radius: 4px;
+      position: relative;
+      box-shadow: 3px 3px 0 var(--gold);
+    }
+    .ad3 .guide-icon .book-icon::after {
+      content: '';
+      position: absolute;
+      top: 12px; left: 10px; right: 10px;
+      height: 2px;
+      background: var(--cream);
+      box-shadow: 0 7px 0 var(--cream), 0 14px 0 var(--cream), 0 21px 0 var(--cream);
+    }
+    .ad3 .guide-icon span {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--dark);
+    }
+    .ad3 .checklist {
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      color: #555;
+      text-align: center;
+      line-height: 1.6;
+      letter-spacing: 0.2px;
+    }
+    .ad3 .btn-brown {
+      background: var(--brown);
+      color: #fff;
+      width: 80%;
+    }
+    .ad3 .bottom-logo {
+      height: 20px; width: auto;
+      opacity: 0.7;
+    }
+
+    /* --- AD 4: Authority --- */
+    .ad4 {
+      background: var(--dark);
+    }
+    .ad4 img.bg {
+      height: 60%;
+      bottom: auto;
+    }
+    .ad4 .overlay {
+      height: 60%;
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.15) 0%,
+        rgba(35,28,22,0.9) 90%,
+        rgba(35,28,22,1) 100%
+      );
+    }
+    .ad4 .logo-white {
+      top: 18px; left: 20px;
+      height: 26px; width: auto;
+    }
+    .ad4 .dark-section {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 44%;
+      background: var(--dark);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 20px 28px;
+      text-align: center;
+      z-index: 4;
+    }
+    .ad4 .dark-section h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 1.2;
+      color: var(--gold);
+      margin-bottom: 10px;
+    }
+    .ad4 .dark-section p {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #bbb;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+    .ad4 .dark-section .btn-outline {
+      font-size: 12px;
+      padding: 10px 24px;
+    }
+
+    /* --- AD 5: Transformation --- */
+    .ad5 .overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.05) 0%,
+        rgba(0,0,0,0.25) 40%,
+        rgba(0,0,0,0.8) 100%
+      );
+    }
+    .ad5 .logo-white {
+      top: 20px; left: 22px;
+      height: 26px; width: auto;
+    }
+    .ad5 .bottom-text {
+      position: absolute;
+      bottom: 22px; left: 24px; right: 24px;
+      z-index: 5;
+    }
+    .ad5 .bottom-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 600;
+      font-size: 24px;
+      line-height: 1.3;
+      color: #fff;
+      margin-bottom: 14px;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    .ad5 .bottom-text .cta-link {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 0.5px;
+    }
+
+    /* --- AD 6: Question Hook --- */
+    .ad6 {
+      background: var(--cream);
+    }
+    .ad6 .content {
+      padding: 30px 28px;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .ad6 .main-q {
+      text-align: center;
+      padding: 0 4px;
+    }
+    .ad6 .main-q h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 30px;
+      line-height: 1.2;
+      color: var(--brown);
+      margin-bottom: 12px;
+    }
+    .ad6 .main-q p {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      color: #666;
+      line-height: 1.6;
+    }
+    .ad6 .thumbs {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+    }
+    .ad6 .thumbs .thumb {
+      width: 80px; height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--gold);
+    }
+    .ad6 .btn-brown {
+      background: var(--brown);
+      color: #fff;
+      width: 75%;
+    }
+    .ad6 .bottom-logo {
+      height: 20px; width: auto;
+      opacity: 0.65;
+    }
+
+    /* --- AD 7: Premium Lifestyle --- */
+    .ad7 .overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.0) 0%,
+        rgba(0,0,0,0.05) 50%,
+        rgba(0,0,0,0.7) 100%
+      );
+    }
+    .ad7 .bottom-text {
+      position: absolute;
+      bottom: 24px; left: 24px; right: 24px;
+      z-index: 5;
+      text-align: center;
+    }
+    .ad7 .bottom-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-style: italic;
+      font-size: 26px;
+      line-height: 1.3;
+      color: #fff;
+      text-shadow: 0 2px 15px rgba(0,0,0,0.5);
+      margin-bottom: 8px;
+    }
+    .ad7 .bottom-text .sub {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    /* --- AD 8: Retargeting --- */
+    .ad8 .overlay {
+      background: linear-gradient(
+        180deg,
+        rgba(0,0,0,0.6) 0%,
+        rgba(0,0,0,0.35) 40%,
+        rgba(0,0,0,0.7) 100%
+      );
+    }
+    .ad8 .logo-white {
+      top: 20px; right: 22px;
+      height: 26px; width: auto;
+    }
+    .ad8 .top-text {
+      position: absolute;
+      top: 60px; left: 24px; right: 24px;
+      z-index: 5;
+      text-align: center;
+    }
+    .ad8 .top-text h2 {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 700;
+      font-size: 26px;
+      line-height: 1.25;
+      color: #fff;
+      text-shadow: 0 2px 12px rgba(0,0,0,0.5);
+    }
+    .ad8 .checks {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    .ad8 .checks .check-item {
+      font-family: 'Inter', sans-serif;
+      font-weight: 500;
+      font-size: 14px;
+      color: #fff;
+      letter-spacing: 0.3px;
+      text-shadow: 0 1px 6px rgba(0,0,0,0.4);
+    }
+    .ad8 .checks .check-item span {
+      color: var(--gold);
+      font-weight: 700;
+      margin-right: 4px;
+    }
+    .ad8 .bottom-cta {
+      position: absolute;
+      bottom: 24px; left: 24px; right: 24px;
+      z-index: 5;
+      text-align: center;
+    }
+    .ad8 .bottom-cta p {
+      font-family: 'Inter', sans-serif;
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--gold);
+      letter-spacing: 0.4px;
+      text-shadow: 0 1px 8px rgba(0,0,0,0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PAGE HEADER -->
+  <header class="page-header">
+    <h1>NUBUILDCo — Ad Creative Mockups</h1>
+    <p>8 Static Ad Concepts &nbsp;|&nbsp; Instagram / Facebook &nbsp;|&nbsp; Preview Only — Not Final Production</p>
+  </header>
+
+  <!-- GRID -->
+  <div class="grid">
+
+    <!-- ======================== AD 1 ======================== -->
+    <div class="mockup-card">
+      <div class="mockup-label">
+        <div class="ad-name">AD 1 — Fear Resolution</div>
+        <div class="ad-meta"><span>Theme:</span> Objection Handling &nbsp;|&nbsp; <span>Size:</span> 1080x1350 &nbsp;|&nbsp; <span>Offer:</span> ₹4,999 Consultation</div>
+      </div>
+      <div class="ad-frame port ad1">
+        <img class="bg" src="../../assets/images/P1291276.jpg" alt="Atrium">
+        <div class="overlay"></div>
+        <img class="logo-white" src="../../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo">
+        <div class="headline" style="z-index:5;">
+          <h2>No Budget Surprises.<br>No Delays.<br>No Excuses.</h2>
+        </div>
+        <div class="badge-wrap" style="z-index:5;">
+          <span class="pill">₹4,999 Design Consultation</span>
+        </div>
+        <div class="cta-bar">
+          <span>Book Now &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== AD 2 ======================== -->
+    <div class="mockup-card">
+      <div class="mockup-label">
+        <div class="ad-name">AD 2 — End-to-End Promise</div>
+        <div class="ad-meta"><span>Theme:</span> Value Proposition &nbsp;|&nbsp; <span>Size:</span> 1080x1080 &nbsp;|&nbsp; <span>Offer:</span> Free Strategy Call</div>
+      </div>
+      <div class="ad-frame sq ad2">
+        <img class="bg" src="../../assets/images/P1291304.jpg" alt="Living Room">
+        <div class="overlay"></div>
+        <img class="logo-white" src="../../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo">
+        <div class="headline" style="z-index:5;">
+          <h2>Why Hire 5 Vendors<br>When 1 Can Do It All?</h2>
+        </div>
+        <div class="subline" style="z-index:5;">
+          <p>DESIGN &rarr; CONSTRUCTION &rarr; INTERIORS &rarr; HANDOVER</p>
+        </div>
+        <div class="cta-bar">
+          <span>Book Free Strategy Call</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== AD 3 ======================== -->
+    <div class="mockup-card">
+      <div class="mockup-label">
+        <div class="ad-name">AD 3 — Cost Guide</div>
+        <div class="ad-meta"><span>Theme:</span> Lead Magnet &nbsp;|&nbsp; <span>Size:</span> 1080x1080 &nbsp;|&nbsp; <span>Offer:</span> Free Download</div>
+      </div>
+      <div class="ad-frame sq ad3">
+        <div class="content">
+          <span class="top-label">FREE DOWNLOAD</span>
+
+          <div class="main-text">
+            <h2>How Much Does It<br><em>REALLY</em> Cost to Build<br>in Hyderabad?</h2>
+          </div>
+
+          <div class="guide-icon">
+            <div class="book-icon"></div>
+            <span>2026 Cost Guide</span>
+          </div>
+
+          <div class="checklist">
+            &#10003; Per Sq. Ft. Rates &nbsp;&nbsp; &#10003; Material Costs &nbsp;&nbsp; &#10003; Timeline Planning
+          </div>
+
+          <div class="btn btn-brown" style="background:var(--brown);color:#fff;width:80%;text-align:center;">
+            Download Free Guide &rarr;
+          </div>
+
+          <img class="bottom-logo" src="../../assets/logos/nubuild - logo - brown.svg" alt="NUBUILDCo">
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== AD 4 ======================== -->
+    <div class="mockup-card">
+      <div class="mockup-label">
+        <div class="ad-name">AD 4 — Authority</div>
+        <div class="ad-meta"><span>Theme:</span> Social Proof &nbsp;|&nbsp; <span>Size:</span> 1080x1350 &nbsp;|&nbsp; <span>Offer:</span> Free Consultation</div>
+      </div>
+      <div class="ad-frame port ad4">
+        <img class="bg" src="../../assets/images/P1291697.jpg" alt="Exterior">
+        <div class="overlay"></div>
+        <img class="logo-white" src="../../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo" style="z-index:5;">
+        <div class="dark-section">
+          <h2>6 Years. ₹25Cr+<br>Delivered.</h2>
+          <p>End-to-end construction &amp; interiors<br>in Hyderabad</p>
+          <div class="btn btn-outline">Book Free Consultation</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== AD 5 ======================== -->
+    <div class="mockup-card">
+      <div class="mockup-label">
+        <div class="ad-name">AD 5 — Transformation</div>
+        <div class="ad-meta"><span>Theme:</span> Aspiration &nbsp;|&nbsp; <span>Size:</span> 1080x1080 &nbsp;|&nbsp; <span>Offer:</span> Portfolio CTA</div>
+      </div>
+      <div class="ad-frame sq ad5">
+        <img class="bg" src="../../assets/images/P1291461.jpg" alt="Dining Room">
+        <div class="overlay"></div>
+        <img class="logo-white" src="../../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo" style="z-index:5;">
+        <div class="bottom-text">
+          <h2>From Empty Plot to Move-In Ready.<br>One Team. One Timeline.</h2>
+          <span class="cta-link">See Our Work &rarr;</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== AD 6 ======================== -->
+    <div class="mockup-card">
+      <div class="mockup-label">
+        <div class="ad-name">AD 6 — Question Hook</div>
+        <div class="ad-meta"><span>Theme:</span> Lead Generation &nbsp;|&nbsp; <span>Size:</span> 1080x1350 &nbsp;|&nbsp; <span>Offer:</span> Free Cost Guide</div>
+      </div>
+      <div class="ad-frame port ad6">
+        <div class="content">
+          <div style="height:4px;"></div>
+
+          <div class="main-q">
+            <h2>Planning to Build<br>in Hyderabad?</h2>
+            <p>Here's what no one tells you about construction costs, timelines, and choosing the right team.</p>
+          </div>
+
+          <div class="thumbs">
+            <img class="thumb" src="../../assets/images/P1291276.jpg" alt="Project 1">
+            <img class="thumb" src="../../assets/images/P1291304.jpg" alt="Project 2">
+            <img class="thumb" src="../../assets/images/P1291461.jpg" alt="Project 3">
+          </div>
+
+          <div class="btn btn-brown" style="background:var(--brown);color:#fff;width:75%;text-align:center;">
+            Get Free Cost Guide
+          </div>
+
+          <img class="bottom-logo" src="../../assets/logos/nubuild - logo - brown.svg" alt="NUBUILDCo">
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== AD 7 ======================== -->
+    <div class="mockup-card">
+      <div class="mockup-label">
+        <div class="ad-name">AD 7 — Premium Lifestyle</div>
+        <div class="ad-meta"><span>Theme:</span> Aspirational / Visual &nbsp;|&nbsp; <span>Size:</span> 1080x1080 &nbsp;|&nbsp; <span>Offer:</span> None (Brand)</div>
+      </div>
+      <div class="ad-frame sq ad7">
+        <img class="bg" src="../../assets/images/P1291385.jpg" alt="Symmetrical Atrium">
+        <div class="overlay"></div>
+        <div class="bottom-text">
+          <h2>Homes That Reflect<br>Your Success</h2>
+          <span class="sub">NUBUILDCo &mdash; Hyderabad</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ======================== AD 8 ======================== -->
+    <div class="mockup-card">
+      <div class="mockup-label">
+        <div class="ad-name">AD 8 — Retargeting</div>
+        <div class="ad-meta"><span>Theme:</span> Retarget / Urgency &nbsp;|&nbsp; <span>Size:</span> 1080x1080 &nbsp;|&nbsp; <span>Offer:</span> Limited Slots</div>
+      </div>
+      <div class="ad-frame sq ad8">
+        <img class="bg" src="../../assets/images/P1291550.jpg" alt="Herringbone Hallway">
+        <div class="overlay"></div>
+        <img class="logo-white" src="../../assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo" style="z-index:5;">
+        <div class="top-text">
+          <h2>Still Thinking About<br>Your Dream Home?</h2>
+        </div>
+        <div class="checks">
+          <div class="check-item"><span>&#10003;</span> Fixed Timeline</div>
+          <div class="check-item"><span>&#10003;</span> Transparent Pricing</div>
+          <div class="check-item"><span>&#10003;</span> One Team</div>
+        </div>
+        <div class="bottom-cta">
+          <p>Limited Consultation Slots — Book Now</p>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /grid -->
+
+</body>
+</html>

@@ -1,0 +1,1925 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NUBUILDCo | Premium Construction & Interiors in Hyderabad</title>
+    <meta name="description" content="End-to-end construction, interiors, and design consultation in Hyderabad. From vision to reality — no budget overruns, no delays. Book a free strategy call.">
+    <meta name="theme-color" content="#81350B">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="NUBUILDCo | Premium Construction & Interiors">
+    <meta property="og:description" content="End-to-end construction, interiors, and design in Hyderabad. 6+ years. ₹25Cr+ projects delivered.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="assets/images/P1291276.jpg">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ============================================
+           DESIGN SYSTEM — NUBUILDCO PREMIUM
+        ============================================ */
+        :root {
+            /* Brand Colors */
+            --brown: #81350B;
+            --brown-dark: #5C2608;
+            --brown-light: #A84E1A;
+            --brown-glow: rgba(129, 53, 11, 0.15);
+
+            /* Warm Neutrals */
+            --cream: #FAF6F1;
+            --cream-dark: #F0E8DD;
+            --warm-50: #FDFBF8;
+            --warm-100: #F7F2EB;
+            --warm-200: #E8DFD3;
+            --warm-300: #D4C7B7;
+            --warm-400: #B8A897;
+            --warm-500: #96836F;
+            --warm-600: #746252;
+            --warm-700: #584A3D;
+            --warm-800: #3D3229;
+            --warm-900: #231C16;
+            --warm-950: #151110;
+
+            /* Accent */
+            --gold: #C49A6C;
+            --gold-light: #D4B896;
+            --gold-dark: #A07A50;
+
+            /* Functional */
+            --white: #FFFFFF;
+            --black: #0F0D0B;
+            --success: #2D7D46;
+            --error: #C33E3E;
+
+            /* Typography */
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Inter', -apple-system, sans-serif;
+
+            /* Spacing */
+            --section-padding: clamp(64px, 10vw, 120px);
+            --container-max: 1200px;
+            --container-narrow: 800px;
+
+            /* Borders */
+            --radius-sm: 4px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 20px;
+
+            /* Transitions */
+            --ease: cubic-bezier(0.16, 1, 0.3, 1);
+            --duration: 300ms;
+        }
+
+        /* ============================================
+           RESET & BASE
+        ============================================ */
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        body {
+            font-family: var(--font-body);
+            font-size: 16px;
+            line-height: 1.7;
+            color: var(--warm-800);
+            background: var(--cream);
+            overflow-x: hidden;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        /* ============================================
+           TYPOGRAPHY
+        ============================================ */
+        .display-xl {
+            font-family: var(--font-display);
+            font-size: clamp(2.8rem, 6vw, 5rem);
+            font-weight: 400;
+            line-height: 1.1;
+            letter-spacing: -0.01em;
+            color: var(--white);
+        }
+
+        .display-lg {
+            font-family: var(--font-display);
+            font-size: clamp(2.2rem, 4.5vw, 3.5rem);
+            font-weight: 400;
+            line-height: 1.15;
+            letter-spacing: -0.01em;
+            color: var(--warm-900);
+        }
+
+        .display-md {
+            font-family: var(--font-display);
+            font-size: clamp(1.6rem, 3vw, 2.2rem);
+            font-weight: 500;
+            line-height: 1.25;
+            color: var(--warm-900);
+        }
+
+        .section-label {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            color: var(--brown);
+        }
+
+        .body-lg {
+            font-size: 1.125rem;
+            line-height: 1.8;
+            color: var(--warm-600);
+        }
+
+        /* ============================================
+           LAYOUT
+        ============================================ */
+        .container {
+            max-width: var(--container-max);
+            margin: 0 auto;
+            padding: 0 clamp(20px, 4vw, 48px);
+        }
+
+        .container--narrow {
+            max-width: var(--container-narrow);
+        }
+
+        section {
+            padding: var(--section-padding) 0;
+        }
+
+        /* ============================================
+           NAVIGATION
+        ============================================ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 20px 0;
+            transition: all var(--duration) var(--ease);
+        }
+
+        .nav.scrolled {
+            background: rgba(250, 246, 241, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            padding: 14px 0;
+            box-shadow: 0 1px 0 rgba(129, 53, 11, 0.08);
+        }
+
+        .nav__inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav__logo {
+            height: 32px;
+            width: auto;
+            transition: opacity var(--duration);
+        }
+
+        .nav__logo--white { display: block; }
+        .nav__logo--brown { display: none; }
+
+        .nav.scrolled .nav__logo--white { display: none; }
+        .nav.scrolled .nav__logo--brown { display: block; }
+
+        .nav__links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav__link {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.85);
+            transition: color var(--duration);
+            cursor: pointer;
+        }
+
+        .nav.scrolled .nav__link {
+            color: var(--warm-600);
+        }
+
+        .nav__link:hover {
+            color: var(--white);
+        }
+
+        .nav.scrolled .nav__link:hover {
+            color: var(--brown);
+        }
+
+        .nav__cta {
+            padding: 10px 24px;
+            background: var(--white);
+            color: var(--brown) !important;
+            border-radius: var(--radius-sm);
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all var(--duration) var(--ease);
+        }
+
+        .nav.scrolled .nav__cta {
+            background: var(--brown);
+            color: var(--white) !important;
+        }
+
+        .nav__cta:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav__mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .nav__mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--white);
+            margin: 6px 0;
+            transition: all var(--duration);
+        }
+
+        .nav.scrolled .nav__mobile-toggle span {
+            background: var(--warm-800);
+        }
+
+        /* ============================================
+           HERO
+        ============================================ */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-end;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .hero__bg {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+        }
+
+        .hero__bg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center 30%;
+        }
+
+        .hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(
+                to bottom,
+                rgba(15, 13, 11, 0.3) 0%,
+                rgba(15, 13, 11, 0.15) 40%,
+                rgba(15, 13, 11, 0.5) 70%,
+                rgba(15, 13, 11, 0.85) 100%
+            );
+            z-index: 1;
+        }
+
+        .hero__content {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 0 clamp(20px, 4vw, 48px) clamp(60px, 8vw, 100px);
+            max-width: var(--container-max);
+            margin: 0 auto;
+        }
+
+        .hero__tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: var(--radius-sm);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.9);
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            backdrop-filter: blur(10px);
+        }
+
+        .hero__tag span {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--gold);
+        }
+
+        .hero__title {
+            max-width: 800px;
+            margin-bottom: 20px;
+        }
+
+        .hero__title em {
+            font-style: italic;
+            color: var(--gold-light);
+        }
+
+        .hero__subtitle {
+            font-size: clamp(1rem, 1.8vw, 1.2rem);
+            color: rgba(255,255,255,0.7);
+            max-width: 560px;
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+
+        .hero__actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .hero__stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 60px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .hero__stat-value {
+            font-family: var(--font-display);
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .hero__stat-label {
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.5);
+            margin-top: 6px;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+        }
+
+        /* ============================================
+           BUTTONS
+        ============================================ */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            font-family: var(--font-body);
+            font-weight: 600;
+            font-size: 0.95rem;
+            padding: 16px 32px;
+            border: none;
+            border-radius: var(--radius-sm);
+            cursor: pointer;
+            transition: all var(--duration) var(--ease);
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn--primary {
+            background: var(--brown);
+            color: var(--white);
+        }
+
+        .btn--primary:hover {
+            background: var(--brown-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(129, 53, 11, 0.3);
+        }
+
+        .btn--secondary {
+            background: transparent;
+            color: var(--white);
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .btn--secondary:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.5);
+        }
+
+        .btn--outline {
+            background: transparent;
+            color: var(--brown);
+            border: 1.5px solid var(--brown);
+        }
+
+        .btn--outline:hover {
+            background: var(--brown);
+            color: var(--white);
+        }
+
+        .btn--large {
+            padding: 18px 40px;
+            font-size: 1rem;
+        }
+
+        .btn__arrow {
+            transition: transform var(--duration) var(--ease);
+        }
+
+        .btn:hover .btn__arrow {
+            transform: translateX(4px);
+        }
+
+        /* ============================================
+           PAIN POINTS SECTION
+        ============================================ */
+        .pain-points {
+            background: var(--white);
+        }
+
+        .pain-points__header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 64px;
+        }
+
+        .pain-points__header .section-label {
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .pain-points__header p {
+            margin-top: 16px;
+            color: var(--warm-500);
+            font-size: 1.05rem;
+        }
+
+        .pain-points__grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+
+        .pain-card {
+            padding: 40px 32px;
+            background: var(--cream);
+            border-radius: var(--radius-lg);
+            border: 1px solid transparent;
+            transition: all var(--duration) var(--ease);
+        }
+
+        .pain-card:hover {
+            border-color: var(--warm-200);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.06);
+        }
+
+        .pain-card__icon {
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--brown-glow);
+            border-radius: var(--radius-md);
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+
+        .pain-card__title {
+            font-family: var(--font-display);
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--warm-900);
+            margin-bottom: 10px;
+        }
+
+        .pain-card__text {
+            font-size: 0.95rem;
+            color: var(--warm-500);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           SERVICES / END-TO-END SECTION
+        ============================================ */
+        .services {
+            background: var(--warm-950);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .services__bg-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 40%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(129, 53, 11, 0.08) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .services__header {
+            max-width: 560px;
+            margin-bottom: 64px;
+        }
+
+        .services__header .section-label {
+            color: var(--gold);
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .services__header .display-lg {
+            color: var(--white);
+        }
+
+        .services__header p {
+            margin-top: 16px;
+            color: rgba(255,255,255,0.5);
+            font-size: 1.05rem;
+        }
+
+        .services__timeline {
+            position: relative;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 0;
+        }
+
+        .services__timeline::before {
+            content: '';
+            position: absolute;
+            top: 36px;
+            left: 5%;
+            right: 5%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--brown-light), var(--brown-light), transparent);
+        }
+
+        .service-step {
+            padding: 0 24px;
+            text-align: center;
+            position: relative;
+        }
+
+        .service-step__number {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: var(--warm-900);
+            border: 2px solid var(--brown);
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--gold);
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-step__title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+
+        .service-step__text {
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.45);
+            line-height: 1.7;
+        }
+
+        /* ============================================
+           PORTFOLIO
+        ============================================ */
+        .portfolio {
+            background: var(--cream);
+        }
+
+        .portfolio__header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 48px;
+        }
+
+        .portfolio__header-text .section-label {
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .portfolio__grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            grid-template-rows: auto;
+            gap: 16px;
+        }
+
+        .portfolio__item {
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .portfolio__item::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(15,13,11,0.5) 0%, transparent 50%);
+            opacity: 0;
+            transition: opacity var(--duration);
+        }
+
+        .portfolio__item:hover::after {
+            opacity: 1;
+        }
+
+        .portfolio__item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s var(--ease);
+        }
+
+        .portfolio__item:hover img {
+            transform: scale(1.05);
+        }
+
+        .portfolio__label {
+            position: absolute;
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            z-index: 2;
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 500;
+            opacity: 0;
+            transform: translateY(8px);
+            transition: all var(--duration) var(--ease);
+        }
+
+        .portfolio__item:hover .portfolio__label {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Grid layout - bento style (4 projects, 12 images) */
+        /* Row 1: Aarohi — hero wide + tall side */
+        .portfolio__item:nth-child(1) { grid-column: 1 / 8; grid-row: 1; aspect-ratio: 16/10; }
+        .portfolio__item:nth-child(2) { grid-column: 8 / 13; grid-row: 1 / 3; aspect-ratio: auto; }
+        .portfolio__item:nth-child(3) { grid-column: 1 / 4; grid-row: 2; aspect-ratio: 1; }
+        /* Row 2: New Project — 3 across */
+        .portfolio__item:nth-child(4) { grid-column: 4 / 8; grid-row: 2; aspect-ratio: 1; }
+        .portfolio__item:nth-child(5) { grid-column: 1 / 5; grid-row: 3; aspect-ratio: 1; }
+        .portfolio__item:nth-child(6) { grid-column: 5 / 9; grid-row: 3; aspect-ratio: 1; }
+        .portfolio__item:nth-child(7) { grid-column: 9 / 13; grid-row: 3; aspect-ratio: 1; }
+        /* Row 4: Sudharshan + Ananthapur */
+        .portfolio__item:nth-child(8) { grid-column: 1 / 5; grid-row: 4; aspect-ratio: 1; }
+        .portfolio__item:nth-child(9) { grid-column: 5 / 9; grid-row: 4; aspect-ratio: 1; }
+        .portfolio__item:nth-child(10) { grid-column: 9 / 13; grid-row: 4; aspect-ratio: 1; }
+        .portfolio__item:nth-child(11) { grid-column: 1 / 7; grid-row: 5; aspect-ratio: 16/10; }
+        .portfolio__item:nth-child(12) { grid-column: 7 / 13; grid-row: 5; aspect-ratio: 16/10; }
+
+        /* ============================================
+           CREDENTIALS / TRUST
+        ============================================ */
+        .trust {
+            background: var(--white);
+        }
+
+        .trust__grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .trust__image {
+            border-radius: var(--radius-xl);
+            overflow: hidden;
+            aspect-ratio: 4/5;
+        }
+
+        .trust__image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .trust__content .section-label {
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .trust__content .display-lg {
+            margin-bottom: 20px;
+        }
+
+        .trust__content > p {
+            color: var(--warm-500);
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+        }
+
+        .trust__metrics {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .trust__metric {
+            padding: 24px;
+            background: var(--cream);
+            border-radius: var(--radius-md);
+        }
+
+        .trust__metric-value {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 600;
+            color: var(--brown);
+            line-height: 1;
+            margin-bottom: 4px;
+        }
+
+        .trust__metric-label {
+            font-size: 0.85rem;
+            color: var(--warm-500);
+        }
+
+        .trust__differentiators {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .trust__differentiators li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+            color: var(--warm-700);
+        }
+
+        .trust__differentiators li::before {
+            content: '';
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            margin-top: 2px;
+            background: var(--brown);
+            mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+            -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='currentColor'%3E%3Cpath fill-rule='evenodd' d='M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z' clip-rule='evenodd'/%3E%3C/svg%3E");
+        }
+
+        /* ============================================
+           COST GUIDE CTA
+        ============================================ */
+        .cta-guide {
+            background: var(--brown);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-guide__bg {
+            position: absolute;
+            inset: 0;
+            opacity: 0.05;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .cta-guide__inner {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 48px;
+        }
+
+        .cta-guide__content {
+            max-width: 560px;
+        }
+
+        .cta-guide__label {
+            display: inline-block;
+            padding: 6px 14px;
+            background: rgba(255,255,255,0.15);
+            border-radius: var(--radius-sm);
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            margin-bottom: 20px;
+        }
+
+        .cta-guide__title {
+            font-family: var(--font-display);
+            font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+            font-weight: 400;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+
+        .cta-guide__text {
+            color: rgba(255,255,255,0.65);
+            font-size: 1rem;
+            margin-bottom: 28px;
+        }
+
+        .cta-guide .btn--secondary {
+            background: var(--white);
+            color: var(--brown);
+            border: none;
+            font-weight: 600;
+        }
+
+        .cta-guide .btn--secondary:hover {
+            background: var(--cream);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+        }
+
+        .cta-guide__features {
+            list-style: none;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .cta-guide__features li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .cta-guide__features li::before {
+            content: '✓';
+            color: var(--gold-light);
+            font-weight: 700;
+        }
+
+        /* ============================================
+           LEAD FORM
+        ============================================ */
+        .form-section {
+            background: var(--cream);
+            position: relative;
+        }
+
+        .form-section__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+        }
+
+        .form-section__content .section-label {
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .form-section__content .display-lg {
+            margin-bottom: 16px;
+        }
+
+        .form-section__content > p {
+            color: var(--warm-500);
+            font-size: 1.05rem;
+            margin-bottom: 40px;
+        }
+
+        .form-section__benefits {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .form-section__benefit {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .form-section__benefit-icon {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--brown-glow);
+            border-radius: var(--radius-md);
+            font-size: 1.1rem;
+        }
+
+        .form-section__benefit-title {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--warm-800);
+            margin-bottom: 2px;
+        }
+
+        .form-section__benefit-text {
+            font-size: 0.875rem;
+            color: var(--warm-500);
+        }
+
+        .lead-form {
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-xl);
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid var(--warm-200);
+        }
+
+        .lead-form__title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--warm-900);
+            margin-bottom: 6px;
+        }
+
+        .lead-form__subtitle {
+            font-size: 0.9rem;
+            color: var(--warm-500);
+            margin-bottom: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--warm-700);
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            color: var(--warm-900);
+            background: var(--cream);
+            border: 1.5px solid var(--warm-200);
+            border-radius: var(--radius-md);
+            outline: none;
+            transition: border-color var(--duration);
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--brown);
+        }
+
+        .form-group input::placeholder {
+            color: var(--warm-400);
+        }
+
+        .form-group select {
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%2396836F' viewBox='0 0 16 16'%3E%3Cpath d='M1.5 5.5l6.5 6.5 6.5-6.5' stroke='%2396836F' stroke-width='1.5' fill='none'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            padding-right: 40px;
+            cursor: pointer;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+
+        .lead-form .btn {
+            width: 100%;
+            justify-content: center;
+            padding: 16px;
+            font-size: 1rem;
+        }
+
+        .form-trust {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 0.8rem;
+            color: var(--warm-400);
+        }
+
+        .form-trust svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--warm-400);
+        }
+
+        /* ============================================
+           FOOTER
+        ============================================ */
+        .footer {
+            background: var(--warm-950);
+            color: rgba(255,255,255,0.5);
+            padding: 64px 0 32px;
+        }
+
+        .footer__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 32px;
+        }
+
+        .footer__brand {
+            max-width: 320px;
+        }
+
+        .footer__logo {
+            height: 28px;
+            margin-bottom: 16px;
+        }
+
+        .footer__tagline {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: rgba(255,255,255,0.4);
+        }
+
+        .footer__contact {
+            text-align: right;
+        }
+
+        .footer__contact-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gold);
+            margin-bottom: 8px;
+        }
+
+        .footer__contact a {
+            display: block;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 4px;
+            transition: color var(--duration);
+        }
+
+        .footer__contact a:hover {
+            color: var(--white);
+        }
+
+        .footer__bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+        }
+
+        .footer__location {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ============================================
+           SCROLL ANIMATIONS
+        ============================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s var(--ease), transform 0.7s var(--ease);
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .reveal-delay-1 { transition-delay: 100ms; }
+        .reveal-delay-2 { transition-delay: 200ms; }
+        .reveal-delay-3 { transition-delay: 300ms; }
+        .reveal-delay-4 { transition-delay: 400ms; }
+
+        /* ============================================
+           MOBILE MENU
+        ============================================ */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: var(--warm-950);
+            padding: 100px 32px 40px;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .mobile-menu.active {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 16px 0;
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--white);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            transition: color var(--duration);
+        }
+
+        .mobile-menu a:hover {
+            color: var(--gold);
+        }
+
+        .mobile-menu__close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* ============================================
+           FORM SUCCESS STATE
+        ============================================ */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .form-success.active {
+            display: block;
+        }
+
+        .form-success__icon {
+            width: 64px;
+            height: 64px;
+            margin: 0 auto 20px;
+            background: var(--brown-glow);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+        }
+
+        .form-success__title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--warm-900);
+            margin-bottom: 8px;
+        }
+
+        .form-success__text {
+            font-size: 0.95rem;
+            color: var(--warm-500);
+        }
+
+        /* ============================================
+           LIGHTBOX
+        ============================================ */
+        .lightbox {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 2000;
+            background: rgba(0,0,0,0.92);
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+            cursor: zoom-out;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90vw;
+            max-height: 85vh;
+            object-fit: contain;
+            border-radius: var(--radius-md);
+        }
+
+        .lightbox__close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 2rem;
+            cursor: pointer;
+            opacity: 0.7;
+            transition: opacity var(--duration);
+        }
+
+        .lightbox__close:hover {
+            opacity: 1;
+        }
+
+        /* ============================================
+           RESPONSIVE
+        ============================================ */
+        @media (max-width: 1024px) {
+            .services__timeline {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 40px;
+            }
+
+            .services__timeline::before {
+                display: none;
+            }
+
+            .trust__grid {
+                gap: 48px;
+            }
+
+            .form-section__inner {
+                gap: 48px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav__links {
+                display: none;
+            }
+
+            .nav__mobile-toggle {
+                display: block;
+            }
+
+            .hero__stats {
+                gap: 24px;
+                flex-wrap: wrap;
+            }
+
+            .pain-points__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .services__timeline {
+                grid-template-columns: 1fr;
+                gap: 48px;
+            }
+
+            .portfolio__grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .portfolio__item:nth-child(1) { grid-column: 1 / 3; grid-row: auto; aspect-ratio: 16/10; }
+            .portfolio__item:nth-child(2) { grid-column: 1 / 3; grid-row: auto; aspect-ratio: 16/10; }
+            .portfolio__item:nth-child(3) { grid-column: 1; grid-row: auto; aspect-ratio: 1; }
+            .portfolio__item:nth-child(4) { grid-column: 2; grid-row: auto; aspect-ratio: 1; }
+            .portfolio__item:nth-child(5) { grid-column: 1 / 3; grid-row: auto; aspect-ratio: 16/10; }
+            .portfolio__item:nth-child(6) { grid-column: 1; grid-row: auto; aspect-ratio: 1; }
+            .portfolio__item:nth-child(7) { grid-column: 2; grid-row: auto; aspect-ratio: 1; }
+            .portfolio__item:nth-child(8) { grid-column: 1; grid-row: auto; aspect-ratio: 1; }
+            .portfolio__item:nth-child(9) { grid-column: 2; grid-row: auto; aspect-ratio: 1; }
+            .portfolio__item:nth-child(10) { grid-column: 1 / 3; grid-row: auto; aspect-ratio: 16/10; }
+            .portfolio__item:nth-child(11) { grid-column: 1 / 3; grid-row: auto; aspect-ratio: 16/10; }
+            .portfolio__item:nth-child(12) { grid-column: 1 / 3; grid-row: auto; aspect-ratio: 16/10; }
+
+            .trust__grid {
+                grid-template-columns: 1fr;
+            }
+
+            .trust__image {
+                aspect-ratio: 16/10;
+            }
+
+            .cta-guide__inner {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .cta-guide__features {
+                justify-content: center;
+            }
+
+            .form-section__inner {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .footer__top {
+                flex-direction: column;
+                gap: 32px;
+            }
+
+            .footer__contact {
+                text-align: left;
+            }
+
+            .footer__bottom {
+                flex-direction: column;
+                gap: 8px;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero__actions {
+                flex-direction: column;
+            }
+
+            .hero__actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .lead-form {
+                padding: 28px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav" id="nav">
+        <div class="container nav__inner">
+            <a href="#" aria-label="NUBUILDCo Home">
+                <img src="assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo" class="nav__logo nav__logo--white">
+                <img src="assets/logos/nubuild - logo - brown.svg" alt="NUBUILDCo" class="nav__logo nav__logo--brown">
+            </a>
+            <ul class="nav__links">
+                <li><a href="#services" class="nav__link">Services</a></li>
+                <li><a href="#portfolio" class="nav__link">Portfolio</a></li>
+                <li><a href="#about" class="nav__link">About</a></li>
+                <li><a href="#contact" class="nav__link nav__cta">Book a Call</a></li>
+            </ul>
+            <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu__close" id="mobileClose" aria-label="Close menu">&times;</button>
+        <a href="#services" onclick="closeMobile()">Services</a>
+        <a href="#portfolio" onclick="closeMobile()">Portfolio</a>
+        <a href="#about" onclick="closeMobile()">About</a>
+        <a href="#contact" onclick="closeMobile()">Book a Call</a>
+    </div>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero__bg">
+            <img src="assets/images/P1291276.jpg" alt="NUBUILDCo luxury interior — double-height atrium with wooden lattice ceiling" loading="eager">
+        </div>
+        <div class="hero__overlay"></div>
+        <div class="hero__content">
+            <div class="hero__tag">
+                <span></span> Premium Construction & Interiors — Hyderabad
+            </div>
+            <h1 class="display-xl hero__title">
+                We Don't Just Build Homes.<br>We Build <em>Legacies.</em>
+            </h1>
+            <p class="hero__subtitle">
+                End-to-end construction, interiors, and design consultation. One team. No surprises. No delays. From vision to handover.
+            </p>
+            <div class="hero__actions">
+                <a href="#contact" class="btn btn--primary btn--large">
+                    Book Free Strategy Call
+                    <span class="btn__arrow">&rarr;</span>
+                </a>
+                <a href="cost-guide.html" class="btn btn--secondary btn--large">
+                    Get Free Cost Guide
+                </a>
+            </div>
+            <div class="hero__stats">
+                <div>
+                    <div class="hero__stat-value">6+</div>
+                    <div class="hero__stat-label">Years Experience</div>
+                </div>
+                <div>
+                    <div class="hero__stat-value">&#8377;25Cr+</div>
+                    <div class="hero__stat-label">Projects Delivered</div>
+                </div>
+                <div>
+                    <div class="hero__stat-value">100%</div>
+                    <div class="hero__stat-label">End-to-End</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PAIN POINTS -->
+    <section class="pain-points" id="problems">
+        <div class="container">
+            <div class="pain-points__header reveal">
+                <span class="section-label">Sound Familiar?</span>
+                <h2 class="display-lg">Building a Home Shouldn't Feel Like a Gamble</h2>
+                <p>Most homeowners face these exact problems. We built NUBUILDCo to solve every single one.</p>
+            </div>
+            <div class="pain-points__grid">
+                <div class="pain-card reveal reveal-delay-1">
+                    <div class="pain-card__icon">&#8377;</div>
+                    <h3 class="pain-card__title">Budget Overruns</h3>
+                    <p class="pain-card__text">Quoted &#8377;50L, final bill &#8377;80L. Contractors add "unexpected costs" at every stage. With us, the price you agree on is the price you pay.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-2">
+                    <div class="pain-card__icon">&#9200;</div>
+                    <h3 class="pain-card__title">Endless Delays</h3>
+                    <p class="pain-card__text">"Two more weeks" turns into two more months. We work with fixed timelines and milestone-based tracking so your project stays on schedule.</p>
+                </div>
+                <div class="pain-card reveal reveal-delay-3">
+                    <div class="pain-card__icon">&#128736;</div>
+                    <h3 class="pain-card__title">Contractor Chaos</h3>
+                    <p class="pain-card__text">Coordinating 5 different vendors is a nightmare. With NUBUILDCo, you get one team for everything — architecture, construction, interiors, and handover.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES — END TO END -->
+    <section class="services" id="services">
+        <div class="services__bg-pattern"></div>
+        <div class="container">
+            <div class="services__header reveal">
+                <span class="section-label">Our Process</span>
+                <h2 class="display-lg">One Team. Start to Finish.</h2>
+                <p>Why hire 5 vendors when one can do it all? We handle every stage so you don't have to.</p>
+            </div>
+            <div class="services__timeline">
+                <div class="service-step reveal reveal-delay-1">
+                    <div class="service-step__number">01</div>
+                    <h3 class="service-step__title">Design Consultation</h3>
+                    <p class="service-step__text">We listen, understand your vision, and create architectural plans and 3D renders that bring your dream to life — before a single brick is laid.</p>
+                </div>
+                <div class="service-step reveal reveal-delay-2">
+                    <div class="service-step__number">02</div>
+                    <h3 class="service-step__title">Construction</h3>
+                    <p class="service-step__text">Our in-house team handles structural work with premium materials, strict quality checks, and milestone-based progress updates.</p>
+                </div>
+                <div class="service-step reveal reveal-delay-3">
+                    <div class="service-step__number">03</div>
+                    <h3 class="service-step__title">Interior Design</h3>
+                    <p class="service-step__text">From furniture and lighting to finishes and fixtures — we design interiors that are functional, beautiful, and uniquely yours.</p>
+                </div>
+                <div class="service-step reveal reveal-delay-4">
+                    <div class="service-step__number">04</div>
+                    <h3 class="service-step__title">Handover</h3>
+                    <p class="service-step__text">Walk into a fully finished home. We handle the final inspections, touch-ups, and complete handover — ready to move in.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PORTFOLIO -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="portfolio__header reveal">
+                <div class="portfolio__header-text">
+                    <span class="section-label">Our Work</span>
+                    <h2 class="display-lg">Crafted With Precision</h2>
+                </div>
+            </div>
+            <div class="portfolio__grid">
+                <!-- Aarohi — Row 1-2 -->
+                <div class="portfolio__item reveal" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/aarohi/living-area.jpg" alt="Aarohi — luxury living area with premium interiors" loading="lazy">
+                    <span class="portfolio__label">Aarohi — Living Area</span>
+                </div>
+                <div class="portfolio__item reveal reveal-delay-1" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/aarohi/north-facade.jpg" alt="Aarohi — north facade exterior architecture" loading="lazy">
+                    <span class="portfolio__label">Aarohi — Exterior</span>
+                </div>
+                <div class="portfolio__item reveal reveal-delay-1" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/aarohi/dining-area.jpg" alt="Aarohi — elegant dining area" loading="lazy">
+                    <span class="portfolio__label">Aarohi — Dining</span>
+                </div>
+                <!-- New Project — Row 2-3 -->
+                <div class="portfolio__item reveal reveal-delay-2" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/new-project/entrance-foyer.jpg" alt="Premium entrance foyer with designer lighting" loading="lazy">
+                    <span class="portfolio__label">Residential — Entrance Foyer</span>
+                </div>
+                <div class="portfolio__item reveal reveal-delay-2" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/new-project/living-area.jpg" alt="Luxury living area with contemporary design" loading="lazy">
+                    <span class="portfolio__label">Residential — Living Area</span>
+                </div>
+                <div class="portfolio__item reveal reveal-delay-3" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/new-project/master-bedroom.jpg" alt="Master bedroom with premium finishes" loading="lazy">
+                    <span class="portfolio__label">Residential — Master Bedroom</span>
+                </div>
+                <div class="portfolio__item reveal reveal-delay-3" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/new-project/kitchen.jpg" alt="Modern modular kitchen with premium fittings" loading="lazy">
+                    <span class="portfolio__label">Residential — Kitchen</span>
+                </div>
+                <!-- Sudharshan House + Ananthapur — Row 4-5 -->
+                <div class="portfolio__item reveal" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/sudharshan-house/exterior-1.jpg" alt="Sudharshan House — modern exterior architecture" loading="lazy">
+                    <span class="portfolio__label">Sudharshan House — Exterior</span>
+                </div>
+                <div class="portfolio__item reveal reveal-delay-1" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/sudharshan-house/exterior-2.jpg" alt="Sudharshan House — architectural elevation" loading="lazy">
+                    <span class="portfolio__label">Sudharshan House — Architecture</span>
+                </div>
+                <div class="portfolio__item reveal reveal-delay-2" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/ananthapur-apartment/interior-1.jpg" alt="Ananthapur Apartment — modern interior" loading="lazy">
+                    <span class="portfolio__label">Ananthapur Apartment — Interior</span>
+                </div>
+                <div class="portfolio__item reveal reveal-delay-1" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/ananthapur-apartment/interior-2.jpg" alt="Ananthapur Apartment — living space" loading="lazy">
+                    <span class="portfolio__label">Ananthapur Apartment — Living</span>
+                </div>
+                <div class="portfolio__item reveal reveal-delay-2" onclick="openLightbox(this)">
+                    <img src="assets/portfolio/aarohi/master-bedroom.jpg" alt="Aarohi — premium master bedroom" loading="lazy">
+                    <span class="portfolio__label">Aarohi — Master Bedroom</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TRUST / CREDENTIALS -->
+    <section class="trust" id="about">
+        <div class="container">
+            <div class="trust__grid">
+                <div class="trust__image reveal">
+                    <img src="assets/images/P1291550.jpg" alt="NUBUILDCo interior — bespoke herringbone flooring and designer details" loading="lazy">
+                </div>
+                <div class="trust__content reveal">
+                    <span class="section-label">Why NUBUILDCo</span>
+                    <h2 class="display-lg">We Build Differently.</h2>
+                    <p>Most construction firms are good at one thing. We do everything — and we do it under one roof, with one team, and one commitment: your complete satisfaction.</p>
+                    <div class="trust__metrics">
+                        <div class="trust__metric">
+                            <div class="trust__metric-value">6+</div>
+                            <div class="trust__metric-label">Years in Practice</div>
+                        </div>
+                        <div class="trust__metric">
+                            <div class="trust__metric-value">&#8377;25Cr+</div>
+                            <div class="trust__metric-label">Projects Delivered</div>
+                        </div>
+                        <div class="trust__metric">
+                            <div class="trust__metric-value">&#8377;2,200</div>
+                            <div class="trust__metric-label">Starting Per Sq. Ft.</div>
+                        </div>
+                        <div class="trust__metric">
+                            <div class="trust__metric-value">End-to-End</div>
+                            <div class="trust__metric-label">Design to Handover</div>
+                        </div>
+                    </div>
+                    <ul class="trust__differentiators">
+                        <li>One team from design to handover — no vendor juggling</li>
+                        <li>Fixed timelines with milestone-based tracking</li>
+                        <li>Transparent pricing — no hidden costs, no surprises</li>
+                        <li>Premium materials and quality-controlled execution</li>
+                        <li>Serving Banjara Hills, Jubilee Hills, Gachibowli & beyond</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COST GUIDE CTA -->
+    <section class="cta-guide" id="cost-guide">
+        <div class="cta-guide__bg"></div>
+        <div class="container">
+            <div class="cta-guide__inner reveal">
+                <div class="cta-guide__content">
+                    <div class="cta-guide__label">Free Download</div>
+                    <h2 class="cta-guide__title">2026 Hyderabad Home Building Cost Guide</h2>
+                    <p class="cta-guide__text">Planning to build? Know the real numbers before you start. Our comprehensive cost guide covers per sq. ft. rates, material costs, interior budgets, and timelines for Hyderabad.</p>
+                    <a href="cost-guide.html" class="btn btn--secondary btn--large">
+                        Download Free Guide
+                        <span class="btn__arrow">&rarr;</span>
+                    </a>
+                </div>
+                <ul class="cta-guide__features">
+                    <li>Per sq. ft. cost breakdown</li>
+                    <li>Material price ranges</li>
+                    <li>Interior budget planning</li>
+                    <li>Timeline expectations</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- LEAD CAPTURE FORM -->
+    <section class="form-section" id="contact">
+        <div class="container">
+            <div class="form-section__inner">
+                <div class="form-section__content reveal">
+                    <span class="section-label">Get Started</span>
+                    <h2 class="display-lg">Let's Build Something Extraordinary</h2>
+                    <p>Book a free 15-minute strategy call. We'll discuss your vision, budget, and timeline — and show you exactly how we can bring it to life.</p>
+                    <ul class="form-section__benefits">
+                        <li class="form-section__benefit">
+                            <div class="form-section__benefit-icon">&#128197;</div>
+                            <div>
+                                <div class="form-section__benefit-title">Free Strategy Call</div>
+                                <div class="form-section__benefit-text">15-minute consultation to understand your project requirements</div>
+                            </div>
+                        </li>
+                        <li class="form-section__benefit">
+                            <div class="form-section__benefit-icon">&#128200;</div>
+                            <div>
+                                <div class="form-section__benefit-title">Transparent Cost Estimate</div>
+                                <div class="form-section__benefit-text">Get a realistic budget range for your specific project</div>
+                            </div>
+                        </li>
+                        <li class="form-section__benefit">
+                            <div class="form-section__benefit-icon">&#127968;</div>
+                            <div>
+                                <div class="form-section__benefit-title">Custom Design Approach</div>
+                                <div class="form-section__benefit-text">See how we would approach your dream home or commercial space</div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="reveal reveal-delay-1">
+                    <form class="lead-form" id="leadForm">
+                        <h3 class="lead-form__title">Book Your Free Consultation</h3>
+                        <p class="lead-form__subtitle">Fill in your details and we'll call you within 2 hours.</p>
+                        <div class="form-group">
+                            <label for="name">Full Name *</label>
+                            <input type="text" id="name" name="name" placeholder="Your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+91 98XXX XXXXX" required>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="budget">Project Budget *</label>
+                                <select id="budget" name="budget" required>
+                                    <option value="" disabled selected>Select range</option>
+                                    <option value="30L-50L">&#8377;30L – &#8377;50L</option>
+                                    <option value="50L-1Cr">&#8377;50L – &#8377;1Cr</option>
+                                    <option value="1Cr-3Cr">&#8377;1Cr – &#8377;3Cr</option>
+                                    <option value="3Cr-5Cr">&#8377;3Cr – &#8377;5Cr</option>
+                                    <option value="5Cr+">&#8377;5Cr+</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="timeline">Project Timeline</label>
+                                <select id="timeline" name="timeline">
+                                    <option value="" disabled selected>When do you plan to start?</option>
+                                    <option value="immediately">Immediately</option>
+                                    <option value="1-3months">1 – 3 months</option>
+                                    <option value="3-6months">3 – 6 months</option>
+                                    <option value="6months+">6+ months</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="project-type">Project Type</label>
+                            <select id="project-type" name="project-type">
+                                <option value="" disabled selected>Select project type</option>
+                                <option value="new-construction">New Construction</option>
+                                <option value="renovation">Renovation / Remodelling</option>
+                                <option value="interiors">Interior Design Only</option>
+                                <option value="commercial">Commercial Project</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--large">
+                            Book Free Strategy Call
+                            <span class="btn__arrow">&rarr;</span>
+                        </button>
+                        <div class="form-trust">
+                            <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd"/></svg>
+                            Your information is secure. We'll never share your details.
+                        </div>
+                    </form>
+                    <div class="form-success" id="formSuccess">
+                        <div class="form-success__icon">&#10003;</div>
+                        <h3 class="form-success__title">Thank You!</h3>
+                        <p class="form-success__text">We've received your details. Our team will call you within 2 hours to schedule your free strategy consultation.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <img src="assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo" class="footer__logo">
+                    <p class="footer__tagline">Premium end-to-end construction, interiors, and design consultation in Hyderabad. From vision to reality — one team, one commitment.</p>
+                </div>
+                <div class="footer__contact">
+                    <div class="footer__contact-label">Get in Touch</div>
+                    <a href="tel:+918978830342">+91 89788 30342</a>
+                    <a href="mailto:hello@nubuildco.com">hello@nubuildco.com</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 NUBUILDCo. All rights reserved.</span>
+                <span class="footer__location">
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="rgba(255,255,255,0.4)"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                    Banjara Hills, Hyderabad
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- LIGHTBOX -->
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+        <button class="lightbox__close" aria-label="Close">&times;</button>
+        <img id="lightboxImg" src="" alt="">
+    </div>
+
+    <!-- JAVASCRIPT -->
+    <script>
+        // =============================================
+        // NAVIGATION — Scroll effect
+        // =============================================
+        const nav = document.getElementById('nav');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY;
+            if (scrollY > 80) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+            lastScroll = scrollY;
+        });
+
+        // =============================================
+        // MOBILE MENU
+        // =============================================
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileClose.addEventListener('click', closeMobile);
+
+        function closeMobile() {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // =============================================
+        // SCROLL REVEAL ANIMATIONS
+        // =============================================
+        const revealElements = document.querySelectorAll('.reveal');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // =============================================
+        // FORM SUBMISSION
+        // =============================================
+        const leadForm = document.getElementById('leadForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        leadForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = new FormData(leadForm);
+            const data = Object.fromEntries(formData.entries());
+
+            // Log the lead data (replace with actual form endpoint)
+            console.log('Lead captured:', data);
+
+            // Show success state
+            leadForm.style.display = 'none';
+            formSuccess.classList.add('active');
+
+            // Construct WhatsApp message
+            const message = encodeURIComponent(
+                `Hi! I'm interested in NUBUILDCo's services.\n\n` +
+                `Name: ${data.name}\n` +
+                `Budget: ${data.budget}\n` +
+                `Timeline: ${data.timeline || 'Not specified'}\n` +
+                `Project Type: ${data['project-type'] || 'Not specified'}`
+            );
+
+            // Open WhatsApp after a short delay
+            setTimeout(() => {
+                window.open(`https://wa.me/918978830342?text=${message}`, '_blank');
+            }, 1500);
+        });
+
+        // =============================================
+        // LIGHTBOX
+        // =============================================
+        function openLightbox(el) {
+            const img = el.querySelector('img');
+            document.getElementById('lightboxImg').src = img.src;
+            document.getElementById('lightbox').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                closeLightbox();
+                closeMobile();
+            }
+        });
+
+        // =============================================
+        // SMOOTH SCROLL for anchor links
+        // =============================================
+        document.querySelectorAll('a[href^="#"]').forEach(link => {
+            link.addEventListener('click', function(e) {
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    e.preventDefault();
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

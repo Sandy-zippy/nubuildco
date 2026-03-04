@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 Hyderabad Home Building Cost Guide — NUBUILDCo</title>
+    <meta name="description" content="Complete guide to construction costs in Hyderabad 2026. Per sq.ft. rates, material costs, interior budgets, timelines, and sample budgets for building your dream home.">
+    <meta name="theme-color" content="#81350B">
+
+    <meta property="og:title" content="2026 Hyderabad Home Building Cost Guide — NUBUILDCo">
+    <meta property="og:description" content="How much does it really cost to build in Hyderabad? Complete cost breakdown with per sq.ft. rates, material prices, and sample budgets.">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="assets/images/P1291276.jpg">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --brown: #81350B;
+            --brown-dark: #5C2608;
+            --brown-light: #A84E1A;
+            --gold: #C49A6C;
+            --gold-light: #D4B896;
+            --gold-dark: #A07A50;
+            --cream: #FAF6F1;
+            --cream-dark: #F0E8DD;
+            --dark: #231C16;
+            --warm-50: #FDFBF8;
+            --warm-200: #E8DFD3;
+            --warm-500: #96836F;
+            --warm-600: #746252;
+            --warm-700: #584A3D;
+            --warm-800: #3D3229;
+            --warm-900: #231C16;
+            --warm-950: #151110;
+            --white: #FFFFFF;
+            --font-display: 'Cormorant Garamond', Georgia, serif;
+            --font-body: 'Inter', -apple-system, sans-serif;
+            --ease: cubic-bezier(0.16, 1, 0.3, 1);
+            --duration: 300ms;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+        body { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--warm-800); background: var(--white); overflow-x: hidden; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { color: inherit; text-decoration: none; }
+
+        /* ============================================
+           NAVIGATION (matches main site)
+        ============================================ */
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            padding: 14px 0;
+            background: rgba(250, 246, 241, 0.95);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 1px 0 rgba(129, 53, 11, 0.08);
+        }
+
+        .nav__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 clamp(20px, 4vw, 48px);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav__logo { height: 32px; width: auto; }
+
+        .nav__links {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav__link {
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: var(--warm-600);
+            transition: color var(--duration);
+            cursor: pointer;
+        }
+
+        .nav__link:hover { color: var(--brown); }
+
+        .nav__cta {
+            padding: 10px 24px;
+            background: var(--brown);
+            color: var(--white) !important;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all var(--duration) var(--ease);
+        }
+
+        .nav__cta:hover {
+            background: var(--brown-dark);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav__mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        .nav__mobile-toggle span {
+            display: block;
+            width: 24px;
+            height: 2px;
+            background: var(--warm-800);
+            margin: 6px 0;
+            transition: all var(--duration);
+        }
+
+        /* Mobile menu */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 999;
+            background: var(--warm-950);
+            padding: 100px 32px 40px;
+            flex-direction: column;
+        }
+
+        .mobile-menu.active { display: flex; }
+
+        .mobile-menu a {
+            display: block;
+            padding: 16px 0;
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            color: var(--white);
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .mobile-menu__close {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 8px;
+        }
+
+        /* ============================================
+           COVER
+        ============================================ */
+        .cover {
+            min-height: 85vh;
+            background: linear-gradient(rgba(15,13,11,0.55), rgba(15,13,11,0.8)), url('assets/images/P1291276.jpg') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 80px 60px;
+            padding-top: 120px;
+            color: var(--white);
+        }
+        .cover__logo { height: 36px; margin-bottom: 48px; }
+        .cover__label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.15em; color: var(--gold-light); margin-bottom: 16px; }
+        .cover__title { font-family: var(--font-display); font-size: clamp(2.2rem, 5vw, 3.2rem); font-weight: 400; line-height: 1.15; margin-bottom: 16px; max-width: 600px; }
+        .cover__subtitle { font-size: 1.1rem; color: rgba(255,255,255,0.7); max-width: 500px; margin-bottom: 48px; }
+        .cover__meta { font-size: 0.8rem; color: rgba(255,255,255,0.45); }
+
+        /* ============================================
+           PAGE CONTENT
+        ============================================ */
+        .page { max-width: 800px; margin: 0 auto; padding: 60px 48px; }
+
+        /* TOC */
+        .toc { padding: 60px 48px; max-width: 800px; margin: 0 auto; }
+        .toc h2 { font-family: var(--font-display); font-size: 2rem; color: var(--brown); margin-bottom: 32px; }
+        .toc-item { display: flex; justify-content: space-between; align-items: baseline; padding: 12px 0; border-bottom: 1px solid var(--cream-dark); cursor: pointer; transition: background var(--duration); }
+        .toc-item:hover { background: var(--cream); padding-left: 12px; padding-right: 12px; }
+        .toc-item span:first-child { font-weight: 500; color: var(--warm-800); }
+        .toc-item span:last-child { color: var(--warm-500); font-size: 0.9rem; }
+        .toc-chapter-num { color: var(--brown); font-weight: 700; margin-right: 12px; }
+
+        /* Chapter opener */
+        .chapter-opener {
+            min-height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 80px 60px;
+            background: var(--cream);
+            position: relative;
+        }
+        .chapter-opener--image {
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+        }
+        .chapter-opener--image::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(129,53,11,0.85), rgba(35,28,22,0.9));
+        }
+        .chapter-opener__inner { position: relative; z-index: 1; max-width: 600px; }
+        .chapter-num { font-family: var(--font-display); font-size: 4rem; font-weight: 700; color: var(--gold); line-height: 1; margin-bottom: 8px; }
+        .chapter-opener--image .chapter-num { color: var(--gold-light); }
+        .chapter-title { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 500; color: var(--brown); line-height: 1.2; margin-bottom: 12px; }
+        .chapter-opener--image .chapter-title { color: var(--white); }
+        .chapter-desc { font-size: 1rem; color: var(--warm-500); }
+        .chapter-opener--image .chapter-desc { color: rgba(255,255,255,0.7); }
+
+        /* Typography */
+        h2 { font-family: var(--font-display); font-size: 1.7rem; font-weight: 600; color: var(--brown); margin: 40px 0 16px; }
+        h3 { font-size: 1rem; font-weight: 600; color: var(--warm-800); margin: 28px 0 12px; }
+        p { margin-bottom: 14px; color: var(--warm-700); }
+
+        /* Tables */
+        table { width: 100%; border-collapse: collapse; margin: 20px 0 28px; font-size: 0.9rem; }
+        thead th { background: var(--brown); color: var(--white); text-align: left; padding: 10px 14px; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; }
+        tbody td { padding: 10px 14px; border-bottom: 1px solid var(--cream-dark); color: var(--warm-700); }
+        tbody tr:nth-child(even) { background: var(--cream); }
+        tbody tr:hover { background: var(--cream-dark); }
+        td strong { color: var(--warm-800); }
+
+        /* Tip boxes */
+        .tip-box { background: var(--cream); border-left: 4px solid var(--brown); padding: 20px 24px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+        .tip-box__label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brown); margin-bottom: 6px; }
+        .tip-box p { margin-bottom: 0; font-size: 0.95rem; }
+
+        .stat-box { background: var(--cream); border-radius: 8px; padding: 24px; text-align: center; margin: 20px 0; }
+        .stat-box__value { font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--brown); line-height: 1; }
+        .stat-box__label { font-size: 0.85rem; color: var(--warm-500); margin-top: 4px; }
+        .stat-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin: 24px 0; }
+
+        /* Formula box */
+        .formula-box { background: var(--dark); color: var(--white); padding: 28px 32px; border-radius: 12px; margin: 28px 0; text-align: center; }
+        .formula-box p { color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-bottom: 12px; }
+        .formula-box__formula { font-family: var(--font-display); font-size: 1.3rem; color: var(--gold-light); font-weight: 500; }
+
+        /* CTA page */
+        .cta-page {
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 80px 48px;
+            background: linear-gradient(135deg, var(--brown), var(--brown-dark));
+            color: var(--white);
+        }
+        .cta-page__logo { height: 40px; margin-bottom: 48px; }
+        .cta-page h2 { font-family: var(--font-display); font-size: clamp(1.8rem, 4vw, 2.5rem); color: var(--white); margin-bottom: 16px; }
+        .cta-page p { color: rgba(255,255,255,0.7); max-width: 500px; margin: 0 auto 32px; }
+        .cta-page__features { list-style: none; margin-bottom: 40px; }
+        .cta-page__features li { padding: 6px 0; font-size: 1rem; color: rgba(255,255,255,0.85); }
+        .cta-page__features li::before { content: '\2713 '; color: var(--gold-light); font-weight: 700; }
+        .cta-page__btn { display: inline-block; padding: 16px 40px; background: var(--white); color: var(--brown); font-weight: 700; font-size: 1rem; border-radius: 4px; text-decoration: none; margin-bottom: 32px; transition: all var(--duration) var(--ease); }
+        .cta-page__btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.2); }
+        .cta-page__contact { font-size: 0.95rem; color: rgba(255,255,255,0.6); }
+        .cta-page__contact a { color: var(--gold-light); text-decoration: none; }
+        .cta-page__footer { margin-top: 48px; font-size: 0.75rem; color: rgba(255,255,255,0.3); }
+
+        /* Page footer */
+        .page-footer { display: flex; justify-content: space-between; align-items: center; padding-top: 20px; margin-top: 40px; border-top: 1px solid var(--cream-dark); font-size: 0.75rem; color: var(--warm-500); }
+
+        /* Site footer */
+        .footer {
+            background: var(--warm-950);
+            color: rgba(255,255,255,0.5);
+            padding: 64px 0 32px;
+        }
+        .footer__inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 clamp(20px, 4vw, 48px);
+        }
+        .footer__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            margin-bottom: 32px;
+        }
+        .footer__brand { max-width: 320px; }
+        .footer__logo { height: 28px; margin-bottom: 16px; }
+        .footer__tagline { font-size: 0.9rem; line-height: 1.7; color: rgba(255,255,255,0.4); }
+        .footer__contact { text-align: right; }
+        .footer__contact-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gold); margin-bottom: 8px; }
+        .footer__contact a { display: block; font-size: 0.9rem; color: rgba(255,255,255,0.6); margin-bottom: 4px; transition: color var(--duration); }
+        .footer__contact a:hover { color: var(--white); }
+        .footer__bottom { display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem; }
+        .footer__location { display: flex; align-items: center; gap: 6px; }
+
+        /* ============================================
+           RESPONSIVE
+        ============================================ */
+        @media (max-width: 768px) {
+            .nav__links { display: none; }
+            .nav__mobile-toggle { display: block; }
+            .cover { padding: 40px 24px; padding-top: 100px; min-height: 70vh; }
+            .cover__title { font-size: 2rem; }
+            .page { padding: 40px 24px; }
+            .toc { padding: 40px 24px; }
+            .chapter-opener { padding: 48px 24px; min-height: 40vh; }
+            .stat-row { grid-template-columns: 1fr; }
+            .footer__top { flex-direction: column; gap: 32px; }
+            .footer__contact { text-align: left; }
+            .footer__bottom { flex-direction: column; gap: 8px; text-align: center; }
+        }
+
+        @media print {
+            .nav, .footer, .mobile-menu { display: none; }
+            body { font-size: 10pt; }
+            .cover { min-height: auto; padding: 40px; }
+            .chapter-opener { min-height: auto; page-break-before: always; }
+            .cover { page-break-after: always; }
+            table { page-break-inside: avoid; }
+            .tip-box { page-break-inside: avoid; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <div class="nav__inner">
+            <a href="index.html" aria-label="NUBUILDCo Home">
+                <img src="assets/logos/nubuild - logo - brown.svg" alt="NUBUILDCo" class="nav__logo">
+            </a>
+            <ul class="nav__links">
+                <li><a href="index.html#services" class="nav__link">Services</a></li>
+                <li><a href="index.html#portfolio" class="nav__link">Portfolio</a></li>
+                <li><a href="index.html#about" class="nav__link">About</a></li>
+                <li><a href="index.html#contact" class="nav__link nav__cta">Book a Call</a></li>
+            </ul>
+            <button class="nav__mobile-toggle" id="mobileToggle" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <button class="mobile-menu__close" id="mobileClose" aria-label="Close menu">&times;</button>
+        <a href="index.html">Home</a>
+        <a href="index.html#services" onclick="closeMobile()">Services</a>
+        <a href="index.html#portfolio" onclick="closeMobile()">Portfolio</a>
+        <a href="index.html#about" onclick="closeMobile()">About</a>
+        <a href="index.html#contact" onclick="closeMobile()">Book a Call</a>
+    </div>
+
+    <!-- ==================== COVER ==================== -->
+    <div class="cover">
+        <img src="assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo" class="cover__logo">
+        <div class="cover__label">Free Guide &mdash; 2026 Edition</div>
+        <h1 class="cover__title">How Much Does It Really Cost to Build in Hyderabad?</h1>
+        <p class="cover__subtitle">The complete guide to construction costs, material rates, timelines, and budgets &mdash; everything you need before building your dream home.</p>
+        <p class="cover__meta">A Comprehensive Guide by NUBUILDCo &nbsp;|&nbsp; February 2026</p>
+    </div>
+
+    <!-- ==================== TOC ==================== -->
+    <div class="toc" id="toc">
+        <h2>What's Inside</h2>
+        <a class="toc-item" href="#ch1"><span><span class="toc-chapter-num">01</span>Why Build in Hyderabad?</span><span>Market overview</span></a>
+        <a class="toc-item" href="#ch2"><span><span class="toc-chapter-num">02</span>The Real Cost &mdash; Per Sq. Ft. Breakdown</span><span>4 tiers</span></a>
+        <a class="toc-item" href="#ch3"><span><span class="toc-chapter-num">03</span>Material Costs Decoded</span><span>50+ prices</span></a>
+        <a class="toc-item" href="#ch4"><span><span class="toc-chapter-num">04</span>Interior Design &mdash; What Does It Cost?</span><span>Room by room</span></a>
+        <a class="toc-item" href="#ch5"><span><span class="toc-chapter-num">05</span>Where to Build &mdash; Area-wise Analysis</span><span>8 localities</span></a>
+        <a class="toc-item" href="#ch6"><span><span class="toc-chapter-num">06</span>The Hidden 25% Nobody Tells You</span><span>16 costs</span></a>
+        <a class="toc-item" href="#ch7"><span><span class="toc-chapter-num">07</span>Timeline &mdash; From Dream to Doorstep</span><span>Phase-wise</span></a>
+        <a class="toc-item" href="#ch8"><span><span class="toc-chapter-num">08</span>Your Budget Planner</span><span>3 samples</span></a>
+        <a class="toc-item" href="#ch9"><span><span class="toc-chapter-num">09</span>Government Process Made Simple</span><span>GHMC + fees</span></a>
+    </div>
+
+    <!-- ==================== CHAPTER 1 ==================== -->
+    <div class="chapter-opener chapter-opener--image" id="ch1" style="background-image: url('assets/images/P1291697.jpg')">
+        <div class="chapter-opener__inner">
+            <div class="chapter-num">01</div>
+            <div class="chapter-title">Why Build in Hyderabad?</div>
+            <div class="chapter-desc">Hyderabad's real estate market is booming. Here's why building your own home is one of the smartest investments you can make.</div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>The Hyderabad Growth Story</h2>
+        <p>Hyderabad is one of India's fastest-growing real estate markets. With a thriving IT corridor, excellent infrastructure development, and a quality of life that rivals Bangalore at half the cost, the city offers a unique opportunity for homeowners.</p>
+
+        <div class="stat-row">
+            <div class="stat-box"><div class="stat-box__value">15-25%</div><div class="stat-box__label">Annual land appreciation in IT corridors</div></div>
+            <div class="stat-box"><div class="stat-box__value">30-40%</div><div class="stat-box__label">Savings building vs. buying from builders</div></div>
+            <div class="stat-box"><div class="stat-box__value">5-7%</div><div class="stat-box__label">Annual construction cost increase</div></div>
+        </div>
+
+        <h2>Build vs. Buy an Apartment</h2>
+        <table>
+            <thead><tr><th>Factor</th><th>Build Your Own</th><th>Buy a Flat</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Cost per sq.ft.</strong></td><td>&#8377;1,600 - 3,500</td><td>&#8377;7,000 - 14,500</td></tr>
+                <tr><td><strong>Customization</strong></td><td>100% your choice</td><td>Limited / None</td></tr>
+                <tr><td><strong>Timeline</strong></td><td>15-24 months</td><td>1-3 months (ready)</td></tr>
+                <tr><td><strong>Appreciation</strong></td><td>Land: 15-25% YoY</td><td>Flat: 8-12% YoY</td></tr>
+                <tr><td><strong>Privacy</strong></td><td>Complete</td><td>Shared walls/areas</td></tr>
+                <tr><td><strong>Parking</strong></td><td>Unlimited</td><td>1-2 spots</td></tr>
+                <tr><td><strong>Resale</strong></td><td>Higher value</td><td>Market rate</td></tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <div class="tip-box__label">Did You Know?</div>
+            <p>Construction costs are rising 5-7% annually. A home that costs &#8377;1 Crore to build today would cost &#8377;1.07 Crore next year. Starting sooner literally saves you lakhs.</p>
+        </div>
+
+        <h2>Year-over-Year Cost Trends</h2>
+        <table>
+            <thead><tr><th>Year</th><th>Avg. Cost (per sq.ft.)</th><th>YoY Change</th></tr></thead>
+            <tbody>
+                <tr><td>2023</td><td>&#8377;1,600 - 2,200</td><td>Baseline</td></tr>
+                <tr><td>2024</td><td>&#8377;1,700 - 2,400</td><td>+6-8%</td></tr>
+                <tr><td>2025</td><td>&#8377;1,800 - 2,600</td><td>+5-7%</td></tr>
+                <tr><td><strong>2026 (projected)</strong></td><td><strong>&#8377;1,900 - 2,800</strong></td><td><strong>+5-7%</strong></td></tr>
+            </tbody>
+        </table>
+
+        <div class="page-footer"><span>NUBUILDCo &mdash; 2026 Hyderabad Cost Guide</span><span>Chapter 1</span></div>
+    </div>
+
+    <!-- ==================== CHAPTER 2 ==================== -->
+    <div class="chapter-opener" id="ch2">
+        <div class="chapter-opener__inner">
+            <div class="chapter-num">02</div>
+            <div class="chapter-title">The Real Cost &mdash; Breaking Down Every Rupee</div>
+            <div class="chapter-desc">Per square foot rates across four quality tiers, and what's actually included at each level.</div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>Construction Cost by Quality Tier</h2>
+        <table>
+            <thead><tr><th>Quality Tier</th><th>Cost Range (per sq.ft.)</th><th>Typical Mid-Point</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Basic</strong></td><td>&#8377;1,400 - 1,800</td><td>&#8377;1,600</td></tr>
+                <tr><td><strong>Standard</strong></td><td>&#8377;1,800 - 2,300</td><td>&#8377;2,050</td></tr>
+                <tr><td><strong>Premium</strong></td><td>&#8377;2,300 - 3,000</td><td>&#8377;2,700</td></tr>
+                <tr><td><strong>Luxury</strong></td><td>&#8377;3,000 - 5,000+</td><td>&#8377;3,500+</td></tr>
+            </tbody>
+        </table>
+
+        <h3>What's Included: Basic (&#8377;1,400-1,800/sq.ft.)</h3>
+        <p>Standard cement (OPC 43), red clay bricks, basic ceramic tiles (&#8377;30-50/sq.ft.), standard sanitary fittings (Hindware economy), basic wiring with standard switches, single-coat paint, simple cement plaster elevation, CPVC plumbing, basic aluminium windows, flush doors.</p>
+
+        <h3>What's Included: Standard (&#8377;1,800-2,300/sq.ft.)</h3>
+        <p>Premium cement (UltraTech/ACC), AAC blocks, vitrified tiles (Kajaria/Somany &#8377;60-100/sq.ft.), Jaquar mid-range fittings, concealed copper wiring with modular switches, two-coat putty + Asian Paints Royale, designed elevation with texture, UPVC windows with mesh, teak frame doors.</p>
+
+        <h3>What's Included: Premium (&#8377;2,300-3,000/sq.ft.)</h3>
+        <p>Quality-tested premium cement, high-grade TMT with mill certificates, Italian/Spanish vitrified or natural stone, Kohler/Grohe fittings, premium modular switches (Legrand Arteor), waterproof premium paints, designer elevation with HPL cladding, full copper plumbing, double-glazed UPVC windows, solid teak doors.</p>
+
+        <h3>What's Included: Luxury (&#8377;3,000-5,000+/sq.ft.)</h3>
+        <p>Imported materials, imported marble/engineered wood, Hansgrohe/Villeroy & Boch fittings, smart home automation wiring, Venetian plaster finishes, glass facade with SS elements, structural glazing, imported doors with biometric locks.</p>
+
+        <h2>Where Your Money Goes</h2>
+        <table>
+            <thead><tr><th>Component</th><th>% of Total Cost</th><th>Approx. Per Sq.Ft. (Standard)</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Materials</strong> (cement, steel, bricks, etc.)</td><td>55-60%</td><td>&#8377;1,000 - 1,230</td></tr>
+                <tr><td><strong>Labour</strong></td><td>25-30%</td><td>&#8377;450 - 615</td></tr>
+                <tr><td><strong>Professional fees</strong></td><td>5-10%</td><td>&#8377;100 - 205</td></tr>
+                <tr><td><strong>Approvals & misc.</strong></td><td>5-10%</td><td>&#8377;100 - 205</td></tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <div class="tip-box__label">Pro Tip</div>
+            <p>Don't just compare per sq.ft. rates &mdash; always ask what's <em>included</em>. A &#8377;1,800 quote that excludes elevation, compound wall, and electrical will end up costing more than a &#8377;2,200 quote that includes everything.</p>
+        </div>
+        <div class="page-footer"><span>NUBUILDCo &mdash; 2026 Hyderabad Cost Guide</span><span>Chapter 2</span></div>
+    </div>
+
+    <!-- ==================== CHAPTER 3 ==================== -->
+    <div class="chapter-opener chapter-opener--image" id="ch3" style="background-image: url('assets/images/P1291304.jpg')">
+        <div class="chapter-opener__inner">
+            <div class="chapter-num">03</div>
+            <div class="chapter-title">Material Costs Decoded</div>
+            <div class="chapter-desc">Current 2026 market rates for every major construction material in Hyderabad.</div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>Core Structural Materials</h2>
+        <table>
+            <thead><tr><th>Material</th><th>Unit</th><th>Price Range (&#8377;)</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Cement (OPC 53)</strong></td><td>50 kg bag</td><td>340 - 450</td></tr>
+                <tr><td>UltraTech</td><td>50 kg bag</td><td>390 - 430</td></tr>
+                <tr><td>ACC / Ambuja</td><td>50 kg bag</td><td>370 - 420</td></tr>
+                <tr><td><strong>TMT Steel (Fe 500D)</strong></td><td>per kg</td><td>65 - 78</td></tr>
+                <tr><td>TATA Tiscon</td><td>per kg</td><td>72 - 78</td></tr>
+                <tr><td>JSW NeoSteel</td><td>per kg</td><td>70 - 76</td></tr>
+                <tr><td><strong>Red Clay Bricks</strong></td><td>per piece</td><td>8 - 12</td></tr>
+                <tr><td><strong>AAC Blocks (4")</strong></td><td>per piece</td><td>40 - 55</td></tr>
+                <tr><td><strong>AAC Blocks (8")</strong></td><td>per piece</td><td>60 - 95</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Tiles &amp; Flooring</h2>
+        <table>
+            <thead><tr><th>Type</th><th>Price per Sq.Ft. (&#8377;)</th></tr></thead>
+            <tbody>
+                <tr><td>Ceramic (budget)</td><td>25 - 45</td></tr>
+                <tr><td>Vitrified (standard 2x2)</td><td>55 - 111</td></tr>
+                <tr><td>Vitrified (premium 4x4)</td><td>125 - 250</td></tr>
+                <tr><td>Porcelain (large format)</td><td>150 - 350</td></tr>
+                <tr><td>Natural marble</td><td>120 - 350</td></tr>
+                <tr><td><strong>Italian marble</strong></td><td><strong>300 - 1,500+</strong></td></tr>
+                <tr><td>Engineered wood</td><td>200 - 500</td></tr>
+                <tr><td>Installation labour</td><td>30 - 50</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Doors &amp; Windows</h2>
+        <table>
+            <thead><tr><th>Item</th><th>Price (&#8377;)</th></tr></thead>
+            <tbody>
+                <tr><td>Flush door (standard)</td><td>3,000 - 6,000 per piece</td></tr>
+                <tr><td>Teak main door (single)</td><td>20,000 - 45,000</td></tr>
+                <tr><td>Teak main door (double)</td><td>35,000 - 80,000</td></tr>
+                <tr><td>UPVC windows</td><td>350 - 800 per sq.ft.</td></tr>
+                <tr><td>Aluminium windows</td><td>900 - 1,600 per sq.ft.</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Paint &amp; Finishes</h2>
+        <table>
+            <thead><tr><th>Type</th><th>Cost per Sq.Ft. (&#8377;)</th></tr></thead>
+            <tbody>
+                <tr><td>Interior &mdash; economy</td><td>12 - 20</td></tr>
+                <tr><td>Interior &mdash; standard (Royale)</td><td>20 - 35</td></tr>
+                <tr><td>Interior &mdash; premium</td><td>35 - 50</td></tr>
+                <tr><td>Exterior</td><td>30 - 80</td></tr>
+            </tbody>
+        </table>
+
+        <div class="page-footer"><span>NUBUILDCo &mdash; 2026 Hyderabad Cost Guide</span><span>Chapter 3</span></div>
+    </div>
+
+    <!-- ==================== CHAPTER 4 ==================== -->
+    <div class="chapter-opener chapter-opener--image" id="ch4" style="background-image: url('assets/images/P1291461.jpg')">
+        <div class="chapter-opener__inner">
+            <div class="chapter-num">04</div>
+            <div class="chapter-title">Interior Design &mdash; What Does It Really Cost?</div>
+            <div class="chapter-desc">From modular kitchens to false ceilings &mdash; a complete interior cost breakdown.</div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>Interior Design Cost by Tier</h2>
+        <table>
+            <thead><tr><th>Tier</th><th>Cost per Sq.Ft.</th><th>Total for 1,500 Sq.Ft.</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Basic</strong></td><td>&#8377;800 - 1,200</td><td>&#8377;12 - 18 Lakhs</td></tr>
+                <tr><td><strong>Premium</strong></td><td>&#8377;1,500 - 2,500</td><td>&#8377;22 - 37 Lakhs</td></tr>
+                <tr><td><strong>Luxury</strong></td><td>&#8377;2,500 - 4,000+</td><td>&#8377;37 - 60+ Lakhs</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Modular Kitchen</h2>
+        <table>
+            <thead><tr><th>Type</th><th>Cost Range</th></tr></thead>
+            <tbody>
+                <tr><td>Basic (MDF, laminate)</td><td>&#8377;1.5L - 3L</td></tr>
+                <tr><td>Mid-Range (marine plywood, granite)</td><td>&#8377;3L - 5L</td></tr>
+                <tr><td>Premium (BWP plywood, quartz, Blum)</td><td>&#8377;5L - 10L</td></tr>
+                <tr><td>Luxury (imported, integrated appliances)</td><td>&#8377;10L - 25L+</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Other Interior Costs</h2>
+        <table>
+            <thead><tr><th>Item</th><th>Budget</th><th>Premium</th><th>Luxury</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Bathroom (per unit)</strong></td><td>&#8377;80K - 1.5L</td><td>&#8377;2.5L - 4L</td><td>&#8377;4L - 10L+</td></tr>
+                <tr><td><strong>Wardrobe (6x8 ft.)</strong></td><td>&#8377;36K - 58K</td><td>&#8377;86K - 1.2L</td><td>&#8377;1.2L - 2L+</td></tr>
+                <tr><td><strong>False Ceiling</strong> (per sq.ft.)</td><td>&#8377;50 - 100</td><td>&#8377;75 - 150</td><td>&#8377;150 - 400+</td></tr>
+                <tr><td><strong>Lighting (3BHK)</strong></td><td>&#8377;50K - 1L</td><td>&#8377;1L - 2.5L</td><td>&#8377;2.5L - 5L+</td></tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <div class="tip-box__label">Pro Tip</div>
+            <p>Interior costs are often underestimated. A good rule: budget 30-40% of your total construction cost for interiors. Cutting corners here will make your &#8377;1 Crore home feel like a &#8377;50 Lakh one.</p>
+        </div>
+        <div class="page-footer"><span>NUBUILDCo &mdash; 2026 Hyderabad Cost Guide</span><span>Chapter 4</span></div>
+    </div>
+
+    <!-- ==================== CHAPTER 5 ==================== -->
+    <div class="chapter-opener" id="ch5">
+        <div class="chapter-opener__inner">
+            <div class="chapter-num">05</div>
+            <div class="chapter-title">Where to Build &mdash; Area-wise Analysis</div>
+            <div class="chapter-desc">Land rates across 8 key Hyderabad localities, growth trends, and what your money buys you.</div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>Land Rates in Hyderabad (per Sq. Yard)</h2>
+        <table>
+            <thead><tr><th>Area</th><th>Price Range</th><th>Category</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Banjara Hills</strong></td><td>&#8377;2.5L - 4L</td><td>Ultra-Premium</td></tr>
+                <tr><td><strong>Jubilee Hills</strong></td><td>&#8377;2.5L - 3.5L</td><td>Ultra-Premium</td></tr>
+                <tr><td><strong>Gachibowli</strong></td><td>&#8377;1.5L - 2.5L</td><td>Premium</td></tr>
+                <tr><td><strong>Financial District</strong></td><td>&#8377;1.5L - 2.5L</td><td>Premium</td></tr>
+                <tr><td><strong>Kondapur</strong></td><td>&#8377;1L - 1.5L</td><td>Premium</td></tr>
+                <tr><td><strong>Madhapur</strong></td><td>&#8377;1L - 1.5L</td><td>Premium</td></tr>
+                <tr><td><strong>Shamshabad</strong></td><td>&#8377;20K - 70K</td><td>Emerging</td></tr>
+                <tr><td><strong>Kompally/Medchal</strong></td><td>&#8377;8K - 40K</td><td>Affordable-Growth</td></tr>
+            </tbody>
+        </table>
+
+        <h2>What a 200 Sq. Yard Plot Costs</h2>
+        <table>
+            <thead><tr><th>Locality</th><th>Plot Cost</th><th>5-Year Growth</th></tr></thead>
+            <tbody>
+                <tr><td>Gachibowli</td><td>&#8377;3Cr - 5Cr</td><td>80-100%</td></tr>
+                <tr><td>Kondapur</td><td>&#8377;2Cr - 3Cr</td><td>70-90%</td></tr>
+                <tr><td>Shamshabad</td><td>&#8377;40L - 1.4Cr</td><td>100-200%</td></tr>
+                <tr><td>Kompally</td><td>&#8377;30L - 80L</td><td>100-400%</td></tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <div class="tip-box__label">Investment Insight</div>
+            <p>Emerging areas like Kompally and Shamshabad have seen 100-400% appreciation in 5 years. Buying land now in these corridors and building in 1-2 years could be one of the best investments you make.</p>
+        </div>
+        <div class="page-footer"><span>NUBUILDCo &mdash; 2026 Hyderabad Cost Guide</span><span>Chapter 5</span></div>
+    </div>
+
+    <!-- ==================== CHAPTER 6 ==================== -->
+    <div class="chapter-opener chapter-opener--image" id="ch6" style="background-image: url('assets/images/P1291491.jpg')">
+        <div class="chapter-opener__inner">
+            <div class="chapter-num">06</div>
+            <div class="chapter-title">The Hidden 25% Nobody Tells You</div>
+            <div class="chapter-desc">The costs your contractor won't mention until you're mid-project. Plan for them now.</div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>Hidden Costs Breakdown</h2>
+        <table>
+            <thead><tr><th>Item</th><th>Estimated Cost</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Soil Testing</strong></td><td>&#8377;5,000 - 15,000</td></tr>
+                <tr><td><strong>Compound/Boundary Wall</strong></td><td>&#8377;1.5L - 5L</td></tr>
+                <tr><td><strong>Landscaping</strong></td><td>&#8377;1L - 10L+</td></tr>
+                <tr><td><strong>Rainwater Harvesting</strong> (mandatory)</td><td>&#8377;20,000 - 80,000</td></tr>
+                <tr><td><strong>Solar Panels</strong> (3 kW with subsidy)</td><td>&#8377;1.2L - 5L</td></tr>
+                <tr><td><strong>Borewell</strong></td><td>&#8377;50,000 - 2L</td></tr>
+                <tr><td><strong>Sump + Overhead Tank</strong></td><td>&#8377;50,000 - 1.5L</td></tr>
+                <tr><td><strong>Elevation/Facade</strong></td><td>&#8377;2L - 15L+</td></tr>
+                <tr><td><strong>Security System</strong></td><td>&#8377;20,000 - 2L</td></tr>
+                <tr><td><strong>Parking Area</strong></td><td>&#8377;50,000 - 3L</td></tr>
+                <tr><td><strong>Municipal Connections</strong></td><td>&#8377;25,000 - 75,000</td></tr>
+                <tr><td><strong>Design Changes Mid-Project</strong></td><td>5-15% cost overrun</td></tr>
+            </tbody>
+        </table>
+
+        <div class="formula-box">
+            <p>THE REAL COST FORMULA</p>
+            <div class="formula-box__formula">Total = Land + Construction + Interiors + Government Fees + Hidden Costs + 12% Buffer</div>
+        </div>
+
+        <h2>Recommended Buffer</h2>
+        <table>
+            <thead><tr><th>Project Size</th><th>Buffer %</th><th>Buffer Amount</th></tr></thead>
+            <tbody>
+                <tr><td>Up to &#8377;50 Lakhs</td><td>15%</td><td>&#8377;7.5 Lakhs</td></tr>
+                <tr><td>&#8377;50L - 1 Crore</td><td>12%</td><td>&#8377;6 - 12 Lakhs</td></tr>
+                <tr><td>&#8377;1 Crore+</td><td>10%</td><td>&#8377;10+ Lakhs</td></tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <div class="tip-box__label">Warning</div>
+            <p>Skipping soil testing (&#8377;5-15K) can lead to foundation cracks costing &#8377;3-5 Lakhs to fix. Never cut corners on the foundation &mdash; it's literally what your home stands on.</p>
+        </div>
+        <div class="page-footer"><span>NUBUILDCo &mdash; 2026 Hyderabad Cost Guide</span><span>Chapter 6</span></div>
+    </div>
+
+    <!-- ==================== CHAPTER 7 ==================== -->
+    <div class="chapter-opener" id="ch7">
+        <div class="chapter-opener__inner">
+            <div class="chapter-num">07</div>
+            <div class="chapter-title">Timeline &mdash; From Dream to Doorstep</div>
+            <div class="chapter-desc">Realistic timelines for every stage of construction, plus seasonal planning tips for Hyderabad.</div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>Overall Construction Timelines</h2>
+        <table>
+            <thead><tr><th>House Size</th><th>Type</th><th>Timeline</th></tr></thead>
+            <tbody>
+                <tr><td>1,000 - 2,000 sq.ft.</td><td>G+0 / G+1</td><td>10 - 15 months</td></tr>
+                <tr><td>2,000 - 4,000 sq.ft.</td><td>G+1 / G+2</td><td>14 - 20 months</td></tr>
+                <tr><td>4,000+ sq.ft. Villa</td><td>Premium/Luxury</td><td>18 - 30 months</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Phase-wise Breakdown</h2>
+        <table>
+            <thead><tr><th>Phase</th><th>Duration</th><th>Key Activities</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Pre-construction</strong></td><td>2-4 months</td><td>Plans, approvals, soil testing</td></tr>
+                <tr><td><strong>Foundation</strong></td><td>1.5-3 months</td><td>Excavation, PCC, footing, plinth</td></tr>
+                <tr><td><strong>Structure</strong> (per floor)</td><td>2-4 months</td><td>Columns, beams, slab, curing</td></tr>
+                <tr><td><strong>Masonry</strong></td><td>1.5-3 months</td><td>Walls, partitions, lintels</td></tr>
+                <tr><td><strong>MEP</strong></td><td>1.5-3 months</td><td>Electrical, plumbing, fixtures</td></tr>
+                <tr><td><strong>Finishing</strong></td><td>2-4 months</td><td>Flooring, doors, painting</td></tr>
+                <tr><td><strong>Interiors</strong></td><td>2-4 months</td><td>Kitchen, wardrobes, furnishing</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Seasonal Planning for Hyderabad</h2>
+        <table>
+            <thead><tr><th>Season</th><th>Months</th><th>Impact</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Best Season</strong></td><td>Oct - Mar</td><td>Dry, ideal for foundation &amp; concrete</td></tr>
+                <tr><td>Summer</td><td>Apr - May</td><td>Hot, needs extra curing</td></tr>
+                <tr><td><strong>Monsoon</strong></td><td>Jun - Sep</td><td>2-4 month delays possible</td></tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <div class="tip-box__label">Pro Tip</div>
+            <p>Start foundation work in October-November. This ensures your structure is complete before the monsoon, potentially saving you 2-4 months of delays.</p>
+        </div>
+        <div class="page-footer"><span>NUBUILDCo &mdash; 2026 Hyderabad Cost Guide</span><span>Chapter 7</span></div>
+    </div>
+
+    <!-- ==================== CHAPTER 8 ==================== -->
+    <div class="chapter-opener chapter-opener--image" id="ch8" style="background-image: url('assets/images/P1291319.jpg')">
+        <div class="chapter-opener__inner">
+            <div class="chapter-num">08</div>
+            <div class="chapter-title">Your Budget Planner</div>
+            <div class="chapter-desc">Complete sample budgets for three house sizes &mdash; from basic to luxury.</div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>2,000 Sq.Ft. House (G+1)</h2>
+        <table>
+            <thead><tr><th>Component</th><th>Basic</th><th>Standard</th><th>Premium</th></tr></thead>
+            <tbody>
+                <tr><td><strong>Construction</strong></td><td>&#8377;32L</td><td>&#8377;41L</td><td>&#8377;54L</td></tr>
+                <tr><td>Architect + Engineer</td><td>&#8377;2L</td><td>&#8377;3L</td><td>&#8377;5L</td></tr>
+                <tr><td>GHMC Permissions</td><td>&#8377;1.5L</td><td>&#8377;1.5L</td><td>&#8377;2L</td></tr>
+                <tr><td>Electrical</td><td>&#8377;2L</td><td>&#8377;3L</td><td>&#8377;5L</td></tr>
+                <tr><td>Plumbing</td><td>&#8377;1.5L</td><td>&#8377;2.5L</td><td>&#8377;4L</td></tr>
+                <tr><td>Modular Kitchen</td><td>&#8377;1.5L</td><td>&#8377;3.5L</td><td>&#8377;7L</td></tr>
+                <tr><td>Wardrobes (3)</td><td>&#8377;1.5L</td><td>&#8377;3L</td><td>&#8377;5L</td></tr>
+                <tr><td>Elevation + Compound</td><td>&#8377;2.5L</td><td>&#8377;5.5L</td><td>&#8377;10L</td></tr>
+                <tr><td>Other (solar, borewell, etc.)</td><td>&#8377;4.15L</td><td>&#8377;6.1L</td><td>&#8377;11.85L</td></tr>
+                <tr><td>Buffer (12%)</td><td>&#8377;5.84L</td><td>&#8377;8.35L</td><td>&#8377;12.7L</td></tr>
+                <tr><td style="background:var(--cream-dark)"><strong>TOTAL</strong></td><td style="background:var(--cream-dark)"><strong>~&#8377;55 Lakhs</strong></td><td style="background:var(--cream-dark)"><strong>~&#8377;78 Lakhs</strong></td><td style="background:var(--cream-dark)"><strong>~&#8377;1.2 Crore</strong></td></tr>
+            </tbody>
+        </table>
+
+        <h2>3,000 Sq.Ft. House (G+2)</h2>
+        <div class="stat-row">
+            <div class="stat-box"><div class="stat-box__value">~&#8377;82L</div><div class="stat-box__label">Basic</div></div>
+            <div class="stat-box"><div class="stat-box__value">~&#8377;1.2Cr</div><div class="stat-box__label">Standard</div></div>
+            <div class="stat-box"><div class="stat-box__value">~&#8377;1.8Cr</div><div class="stat-box__label">Premium</div></div>
+        </div>
+
+        <h2>5,000 Sq.Ft. Villa</h2>
+        <div class="stat-row" style="grid-template-columns: 1fr 1fr;">
+            <div class="stat-box"><div class="stat-box__value">~&#8377;2.7Cr</div><div class="stat-box__label">Premium (incl. landscaping, smart home)</div></div>
+            <div class="stat-box"><div class="stat-box__value">~&#8377;4.9Cr</div><div class="stat-box__label">Luxury (pool, lift, home theatre)</div></div>
+        </div>
+
+        <h2>Total Cost Including Land</h2>
+        <table>
+            <thead><tr><th>House Type</th><th>Kompally</th><th>Kondapur</th><th>Gachibowli</th></tr></thead>
+            <tbody>
+                <tr><td>2,000 sq.ft. Basic</td><td>&#8377;95L-1.3Cr</td><td>&#8377;2.5-3.8Cr</td><td>&#8377;3.5-5.5Cr</td></tr>
+                <tr><td>2,000 sq.ft. Premium</td><td>&#8377;1.6-2Cr</td><td>&#8377;3.2-4.2Cr</td><td>&#8377;4.2-6.2Cr</td></tr>
+                <tr><td>3,000 sq.ft. Standard</td><td>&#8377;1.6-2.2Cr</td><td>&#8377;3.7-5Cr</td><td>&#8377;5-7.5Cr</td></tr>
+                <tr><td>5,000 sq.ft. Premium</td><td>&#8377;3.5-5Cr</td><td>&#8377;7.7-10.5Cr</td><td>&#8377;10.5-15Cr</td></tr>
+            </tbody>
+        </table>
+
+        <div class="page-footer"><span>NUBUILDCo &mdash; 2026 Hyderabad Cost Guide</span><span>Chapter 8</span></div>
+    </div>
+
+    <!-- ==================== CHAPTER 9 ==================== -->
+    <div class="chapter-opener" id="ch9">
+        <div class="chapter-opener__inner">
+            <div class="chapter-num">09</div>
+            <div class="chapter-title">Government Process Made Simple</div>
+            <div class="chapter-desc">GHMC permissions, HMDA charges, stamp duty, and registration &mdash; all in one place.</div>
+        </div>
+    </div>
+
+    <div class="page">
+        <h2>GHMC Building Permission Costs</h2>
+        <table>
+            <thead><tr><th>Plot/House Size</th><th>Approx. Permission Cost</th></tr></thead>
+            <tbody>
+                <tr><td>200 sq.yd., G+1 (2,000 sq.ft.)</td><td>&#8377;1L - 2.5L</td></tr>
+                <tr><td>300 sq.yd., G+2 (3,000 sq.ft.)</td><td>&#8377;1.5L - 3.5L</td></tr>
+                <tr><td>500 sq.yd., G+2 (5,000 sq.ft.)</td><td>&#8377;2.5L - 5L</td></tr>
+            </tbody>
+        </table>
+
+        <h2>Stamp Duty &amp; Registration in Telangana</h2>
+        <table>
+            <thead><tr><th>Charge</th><th>Rate</th></tr></thead>
+            <tbody>
+                <tr><td>Stamp Duty</td><td>4% of market value</td></tr>
+                <tr><td>Registration Fee</td><td>0.5%</td></tr>
+                <tr><td>Transfer Duty</td><td>1.5%</td></tr>
+                <tr><td style="background:var(--cream-dark)"><strong>Total Government Levy</strong></td><td style="background:var(--cream-dark)"><strong>6% of property value</strong></td></tr>
+            </tbody>
+        </table>
+
+        <h2>Registration Cost Examples</h2>
+        <table>
+            <thead><tr><th>Property Value</th><th>Stamp Duty</th><th>Registration</th><th>Transfer</th><th>Total</th></tr></thead>
+            <tbody>
+                <tr><td>&#8377;50 Lakhs</td><td>&#8377;2L</td><td>&#8377;25K</td><td>&#8377;75K</td><td><strong>&#8377;3L</strong></td></tr>
+                <tr><td>&#8377;1 Crore</td><td>&#8377;4L</td><td>&#8377;50K</td><td>&#8377;1.5L</td><td><strong>&#8377;6L</strong></td></tr>
+                <tr><td>&#8377;2 Crore</td><td>&#8377;8L</td><td>&#8377;1L</td><td>&#8377;3L</td><td><strong>&#8377;12L</strong></td></tr>
+            </tbody>
+        </table>
+
+        <div class="tip-box">
+            <div class="tip-box__label">Good News</div>
+            <p>Telangana has one of the lowest combined stamp duty + registration rates in India at 6%. And rates are the same for men and women &mdash; no gender-based discrimination.</p>
+        </div>
+        <div class="page-footer"><span>NUBUILDCo &mdash; 2026 Hyderabad Cost Guide</span><span>Chapter 9</span></div>
+    </div>
+
+    <!-- ==================== CTA PAGE ==================== -->
+    <div class="cta-page">
+        <img src="assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo" class="cta-page__logo">
+        <h2>Ready to Build Your Dream Home?</h2>
+        <p>You now have the numbers, the timelines, and the knowledge. The next step? Talk to someone who can bring it all together &mdash; under one roof.</p>
+        <ul class="cta-page__features">
+            <li>6+ years experience, &#8377;25Cr+ projects delivered</li>
+            <li>End-to-end: Design &rarr; Construction &rarr; Interiors &rarr; Handover</li>
+            <li>Fixed timelines with milestone-based tracking</li>
+            <li>Transparent pricing &mdash; no hidden costs, no surprises</li>
+            <li>Serving Banjara Hills, Jubilee Hills, Gachibowli &amp; beyond</li>
+        </ul>
+        <a href="index.html#contact" class="cta-page__btn">Book Your Free Strategy Call &rarr;</a>
+        <div class="cta-page__contact">
+            <a href="tel:+918978830342">+91 89788 30342</a> &nbsp;&bull;&nbsp; <a href="index.html">nubuildco.netlify.app</a>
+        </div>
+        <div class="cta-page__footer">&copy; 2026 NUBUILDCo. All rights reserved. &nbsp;|&nbsp; Banjara Hills, Hyderabad</div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer__inner">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <img src="assets/logos/nubuild - logo - white.svg" alt="NUBUILDCo" class="footer__logo">
+                    <p class="footer__tagline">Premium end-to-end construction, interiors, and design consultation in Hyderabad. From vision to reality &mdash; one team, one commitment.</p>
+                </div>
+                <div class="footer__contact">
+                    <div class="footer__contact-label">Get in Touch</div>
+                    <a href="tel:+918978830342">+91 89788 30342</a>
+                    <a href="mailto:hello@nubuildco.com">hello@nubuildco.com</a>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <span>&copy; 2026 NUBUILDCo. All rights reserved.</span>
+                <span class="footer__location">
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="rgba(255,255,255,0.4)"><path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/></svg>
+                    Banjara Hills, Hyderabad
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu
+        const mobileToggle = document.getElementById('mobileToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const mobileClose = document.getElementById('mobileClose');
+
+        mobileToggle.addEventListener('click', () => {
+            mobileMenu.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileClose.addEventListener('click', closeMobile);
+
+        function closeMobile() {
+            mobileMenu.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeMobile();
+        });
+    </script>
+
+</body>
+</html>
