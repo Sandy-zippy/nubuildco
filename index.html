@@ -1367,6 +1367,85 @@
         /* ============================================
            RESPONSIVE
         ============================================ */
+        /* ============================================
+           GUIDE DOWNLOAD MODAL
+        ============================================ */
+        .guide-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .guide-modal.active {
+            display: flex;
+        }
+
+        .guide-modal__overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(4px);
+        }
+
+        .guide-modal__content {
+            position: relative;
+            background: var(--white);
+            border-radius: 16px;
+            padding: 40px;
+            max-width: 440px;
+            width: 100%;
+            box-shadow: 0 24px 64px rgba(0,0,0,0.2);
+        }
+
+        .guide-modal__close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            cursor: pointer;
+            color: var(--warm-500);
+            line-height: 1;
+        }
+
+        .guide-modal__title {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+        }
+
+        .guide-modal__text {
+            font-size: 0.9rem;
+            color: var(--warm-600);
+            margin-bottom: 24px;
+            line-height: 1.5;
+        }
+
+        .guide-modal__form .form-group {
+            margin-bottom: 16px;
+        }
+
+        .guide-modal__form .btn {
+            width: 100%;
+            justify-content: center;
+        }
+
+        @media (max-width: 480px) {
+            .guide-modal__content {
+                padding: 28px 20px;
+            }
+        }
+
         @media (max-width: 1024px) {
             .services__timeline {
                 grid-template-columns: repeat(2, 1fr);
@@ -1757,10 +1836,10 @@
                     <div class="cta-guide__label">Free Download</div>
                     <h2 class="cta-guide__title">2026 Hyderabad Home Building Cost Guide</h2>
                     <p class="cta-guide__text">Planning to build? Know the real numbers before you start. Our comprehensive cost guide covers per sq. ft. rates, material costs, interior budgets, and timelines for Hyderabad.</p>
-                    <a href="cost-guide.html" class="btn btn--secondary btn--large">
+                    <button type="button" class="btn btn--secondary btn--large" onclick="openGuideForm()">
                         Download Free Guide
                         <span class="btn__arrow">&rarr;</span>
-                    </a>
+                    </button>
                 </div>
                 <ul class="cta-guide__features">
                     <li>Per sq. ft. cost breakdown</li>
@@ -1839,6 +1918,31 @@
                                 </select>
                             </div>
                         </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="plot-size">Plot / Built-up Area (sq. ft.) *</label>
+                                <input type="text" id="plot-size" name="plot-size" placeholder="e.g. 2400 sq. ft." required>
+                            </div>
+                            <div class="form-group">
+                                <label for="location">Location in Hyderabad *</label>
+                                <select id="location" name="location" required>
+                                    <option value="" disabled selected>Select area</option>
+                                    <option value="banjara-hills">Banjara Hills</option>
+                                    <option value="jubilee-hills">Jubilee Hills</option>
+                                    <option value="hitech-city">Hi-Tech City / Madhapur</option>
+                                    <option value="gachibowli">Gachibowli / Financial District</option>
+                                    <option value="kondapur">Kondapur / Manikonda</option>
+                                    <option value="kukatpally">Kukatpally / KPHB</option>
+                                    <option value="secunderabad">Secunderabad / Begumpet</option>
+                                    <option value="shamshabad">Shamshabad / Airport Area</option>
+                                    <option value="miyapur">Miyapur / Chandanagar</option>
+                                    <option value="lb-nagar">LB Nagar / Dilsukhnagar</option>
+                                    <option value="uppal">Uppal / Habsiguda</option>
+                                    <option value="kompally">Kompally / Medchal</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
                         <div class="form-group">
                             <label for="name">Full Name *</label>
                             <input type="text" id="name" name="name" placeholder="Your full name" required>
@@ -1860,17 +1964,20 @@
                         <div class="form-success__icon">&#10003;</div>
                         <h3 class="form-success__title">Thank You!</h3>
                         <p class="form-success__text">We've received your details. Our team will call you within 2 hours to schedule your free strategy consultation.</p>
+                        <a href="https://wa.me/918978830342" class="btn btn--outline form-success__wa-link" target="_blank" style="margin-bottom:24px;width:100%;justify-content:center;">
+                            Chat with us on WhatsApp &rarr;
+                        </a>
                         <div class="form-success__upsell">
-                            <p class="form-success__upsell-label">Want a detailed, personalised consultation?</p>
+                            <p class="form-success__upsell-label">Skip the wait — get a detailed site visit this week:</p>
                             <div class="form-success__upsell-card">
-                                <h4>Premium Design Consultation — &#8377;4,999</h4>
+                                <h4>Paid Site Visit &amp; Design Consultation — &#8377;4,999</h4>
                                 <ul>
                                     <li>60-minute in-depth session with our design team</li>
-                                    <li>Site visit + preliminary layout concepts</li>
-                                    <li>Detailed cost estimate for your specific project</li>
+                                    <li>On-site visit + preliminary layout concepts</li>
+                                    <li>Detailed cost estimate for your specific plot &amp; requirements</li>
                                     <li>100% refundable if you proceed with NUBUILDCo</li>
                                 </ul>
-                                <a href="https://wa.me/918978830342?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Premium%20Design%20Consultation%20(%E2%82%B94%2C999)" class="btn btn--primary" target="_blank">Book Premium Consultation &rarr;</a>
+                                <a href="https://wa.me/918978830342?text=Hi%2C%20I%27d%20like%20to%20book%20the%20Paid%20Site%20Visit%20%26%20Design%20Consultation%20(%E2%82%B94%2C999).%20I%20just%20submitted%20my%20details%20on%20the%20website." class="btn btn--primary" target="_blank" style="width:100%;justify-content:center;">Book Paid Site Visit — &#8377;4,999 &rarr;</a>
                             </div>
                         </div>
                     </div>
@@ -1878,6 +1985,33 @@
             </div>
         </div>
     </section>
+
+    <!-- GUIDE DOWNLOAD MODAL -->
+    <div class="guide-modal" id="guideModal">
+        <div class="guide-modal__overlay" onclick="closeGuideForm()"></div>
+        <div class="guide-modal__content">
+            <button class="guide-modal__close" onclick="closeGuideForm()" aria-label="Close">&times;</button>
+            <h3 class="guide-modal__title">Get Your Free Cost Guide</h3>
+            <p class="guide-modal__text">Enter your details and we'll send you the 2026 Hyderabad Home Building Cost Guide instantly.</p>
+            <form class="guide-modal__form" id="guideForm">
+                <div class="form-group">
+                    <label for="guide-name">Your Name *</label>
+                    <input type="text" id="guide-name" name="guide-name" placeholder="Full name" required>
+                </div>
+                <div class="form-group">
+                    <label for="guide-phone">Phone Number *</label>
+                    <input type="tel" id="guide-phone" name="guide-phone" placeholder="+91 98XXX XXXXX" pattern="[\+]?[0-9\s\-]{10,15}" required>
+                </div>
+                <button type="submit" class="btn btn--primary btn--large">
+                    Download Now <span class="btn__arrow">&rarr;</span>
+                </button>
+                <div class="form-trust">
+                    <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 1a4.5 4.5 0 00-4.5 4.5V9H5a2 2 0 00-2 2v6a2 2 0 002 2h10a2 2 0 002-2v-6a2 2 0 00-2-2h-.5V5.5A4.5 4.5 0 0010 1zm3 8V5.5a3 3 0 10-6 0V9h6z" clip-rule="evenodd"/></svg>
+                    We'll never spam you. Guide is 100% free.
+                </div>
+            </form>
+        </div>
+    </div>
 
     <!-- FOOTER -->
     <footer class="footer">
@@ -2012,6 +2146,23 @@
             // TODO: Replace placeholder URL with actual GHL webhook URL from NUBuild sub-account
             const webhookUrl = 'https://services.leadconnectorhq.com/hooks/woRHKXvoq2V8JfLXPNnC/webhook-landing-page';
 
+            // Map location to readable label
+            const locationMap = {
+                'banjara-hills': 'Banjara Hills',
+                'jubilee-hills': 'Jubilee Hills',
+                'hitech-city': 'Hi-Tech City / Madhapur',
+                'gachibowli': 'Gachibowli / Financial District',
+                'kondapur': 'Kondapur / Manikonda',
+                'kukatpally': 'Kukatpally / KPHB',
+                'secunderabad': 'Secunderabad / Begumpet',
+                'shamshabad': 'Shamshabad / Airport Area',
+                'miyapur': 'Miyapur / Chandanagar',
+                'lb-nagar': 'LB Nagar / Dilsukhnagar',
+                'uppal': 'Uppal / Habsiguda',
+                'kompally': 'Kompally / Medchal',
+                'other': 'Other'
+            };
+
             const ghlPayload = {
                 first_name: firstName,
                 last_name: lastName,
@@ -2019,7 +2170,9 @@
                 source: 'Landing Page',
                 project_type: projectTypeMap[data['project-type']] || data['project-type'] || '',
                 budget: budgetMap[data.budget] || data.budget || '',
-                timeline: timelineMap[data.timeline] || data.timeline || ''
+                timeline: timelineMap[data.timeline] || data.timeline || '',
+                plot_size: data['plot-size'] || '',
+                location: locationMap[data.location] || data.location || ''
             };
 
             try {
@@ -2037,19 +2190,23 @@
             leadForm.style.display = 'none';
             formSuccess.classList.add('active');
 
-            // Construct WhatsApp message
+            // Construct WhatsApp message with all fields
             const message = encodeURIComponent(
                 `Hi! I'm interested in NUBUILDCo's services.\n\n` +
                 `Name: ${data.name}\n` +
+                `Phone: ${data.phone}\n` +
+                `Project Type: ${projectTypeMap[data['project-type']] || data['project-type'] || 'Not specified'}\n` +
                 `Budget: ${data.budget}\n` +
-                `Timeline: ${data.timeline || 'Not specified'}\n` +
-                `Project Type: ${data['project-type'] || 'Not specified'}`
+                `Plot Size: ${data['plot-size'] || 'Not specified'}\n` +
+                `Location: ${locationMap[data.location] || data.location || 'Not specified'}\n` +
+                `Timeline: ${timelineMap[data.timeline] || data.timeline || 'Not specified'}`
             );
 
-            // Open WhatsApp after a short delay
-            setTimeout(() => {
-                window.open(`https://wa.me/918978830342?text=${message}`, '_blank');
-            }, 1500);
+            // Store WhatsApp link for manual click (don't auto-redirect — let user see ₹4,999 upsell)
+            const waLink = document.querySelector('.form-success__wa-link');
+            if (waLink) {
+                waLink.href = `https://wa.me/918978830342?text=${message}`;
+            }
         });
 
         // =============================================
@@ -2071,7 +2228,56 @@
             if (e.key === 'Escape') {
                 closeLightbox();
                 closeMobile();
+                closeGuideForm();
             }
+        });
+
+        // =============================================
+        // GUIDE DOWNLOAD MODAL
+        // =============================================
+        function openGuideForm() {
+            document.getElementById('guideModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGuideForm() {
+            document.getElementById('guideModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        document.getElementById('guideForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button[type="submit"]');
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+
+            const name = document.getElementById('guide-name').value;
+            const phone = document.getElementById('guide-phone').value;
+            const nameParts = name.trim().split(' ');
+
+            // Submit to GHL as guide download lead
+            const webhookUrl = 'https://services.leadconnectorhq.com/hooks/woRHKXvoq2V8JfLXPNnC/webhook-landing-page';
+            try {
+                await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        first_name: nameParts[0] || '',
+                        last_name: nameParts.slice(1).join(' ') || '',
+                        phone: phone,
+                        source: 'Cost Guide Download'
+                    })
+                });
+            } catch (err) {
+                console.warn('GHL guide submit error:', err);
+            }
+
+            // Redirect to the cost guide page
+            closeGuideForm();
+            window.open('cost-guide.html', '_blank');
+            btn.disabled = false;
+            btn.innerHTML = 'Download Now <span class="btn__arrow">&rarr;</span>';
+            this.reset();
         });
 
         // =============================================
